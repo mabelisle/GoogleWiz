@@ -73,38 +73,38 @@ The ROM contains (only) the following Samsung applications: Settings (you can't 
         - my maps (https://play.google.com/store/apps/details?id=com.google.android.apps.m4b)
         - musicfx (equalizer) (accessible via Settings > Sound > Sound quality and effects)
         - google backup
-        - No weird Samsung background services
-        - No need for a Samsung account; only a Google account
-        - Rooted with Magisk (see https://forum.xda-developers.com/apps/magisk)
-        - Magisk manager (see https://forum.xda-developers.com/apps/magisk)
-        - Working Magisk SafetyNet
-        - Configurable installer (no aroma; simple text file) which allows to remove some Google apps if you don't like them (see below) and tweak some options
-        - Auto enablement of overlays at boot time
-        - Know warranty 0x0
-        - Modified build.prop (performance tweaks)
-        - Based on February 2019 security update from Samsung (base G950FXXS4CSB1)
-        - Configurable BIXBY key (by default mapping to Nova home screen)
-        - Configurable immersive mode (none, hide navbar, hide navbar and statusbar)
-        - MTP (optional)
-        - MMS (optional) some people still seem to use this tech)
-        - Knox and tima removed fully ... no, I really mean FULLY ... also from kernel ramdisk where possible
-        - /etc/init.d and /etc/services.d (in case you want to add custom scripts put them in /sdcard/init.d/)
-        - /omr and /preload mounting removed (if you don't know what this is, don't worry)
-        - ROM does not contain country specific CSCs; all settings generic
-        - Fix lack of voice in Google app when reading answers to a search
-        - NX kernel (see credits below)
-        - Bluetooth aptx
-        - bash shell (with bashrc and bash_aliases in /etc/bash/)
-        - AdAway (optional)
-        - Black nav bar (optional; only useful if you plan to have dark/black themes with Substratum)
-        - BusyBox v1.29.2
-        - Improved dozing & reduced battery consumption in sleep mode
-        - Fast ... very fast ... no useless Samsung background daemons; processes optimized via cgroups ... and many optimization settings and tweaks
-        - Good battery life
-        - OEM unlock on by default (cannot be turned off; will be shown as OFF in Settings => don't worry about this)
-        - Netflix fix
-        - Manage SMS/text messages from your browser (https://messages.android.com/)
-        - Auto cleanup and sqlite DB optimization at boot time
+- No weird Samsung background services
+- No need for a Samsung account; only a Google account
+- Rooted with Magisk (see https://forum.xda-developers.com/apps/magisk)
+- Magisk manager (see https://forum.xda-developers.com/apps/magisk)
+- Working Magisk SafetyNet
+- Configurable installer (no aroma; simple text file) which allows to remove some Google apps if you don't like them (see below) and tweak some options
+- Auto enablement of overlays at boot time
+- Know warranty 0x0
+- Modified build.prop (performance tweaks)
+- Based on February 2019 security update from Samsung (base G950FXXS4CSB1)
+- Configurable BIXBY key (by default mapping to Nova home screen)
+- Configurable immersive mode (none, hide navbar, hide navbar and statusbar)
+- MTP (optional)
+- MMS (optional) some people still seem to use this tech)
+- Knox and tima removed fully ... no, I really mean FULLY ... also from kernel ramdisk where possible
+- /etc/init.d and /etc/services.d (in case you want to add custom scripts put them in /sdcard/init.d/)
+- /omr and /preload mounting removed (if you don't know what this is, don't worry)
+- ROM does not contain country specific CSCs; all settings generic
+- Fix lack of voice in Google app when reading answers to a search
+- NX kernel (see credits below)
+- Bluetooth aptx
+- bash shell (with bashrc and bash_aliases in /etc/bash/)
+- AdAway (optional)
+- Black nav bar (optional; only useful if you plan to have dark/black themes with Substratum)
+- BusyBox v1.29.2
+- Improved dozing & reduced battery consumption in sleep mode
+- Fast ... very fast ... no useless Samsung background daemons; processes optimized via cgroups ... and many optimization settings and tweaks
+- Good battery life
+- OEM unlock on by default (cannot be turned off; will be shown as OFF in Settings => don't worry about this)
+- Netflix fix
+- Manage SMS/text messages from your browser (https://messages.android.com/)
+- Auto cleanup and sqlite DB optimization at boot time
 
 ## What is NOT in the ROM
 I have left out loads of stuff ... mainly because I don't use these features ... and/or they are Samsung specific. Don't ask me to integrate Samsung specific features because I won't: Samstuff stuff (all left out), Live wallpapers, Wear and Gear (but read further below please), Multiwindow, Clearcover, Edge, Docking, DEX, No call recording for now, Samsung dual messenger, VoIP (wifi calling) and VoLTE (but read further below for VoLTE), ...
