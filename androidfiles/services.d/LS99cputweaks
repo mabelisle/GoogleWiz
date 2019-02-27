@@ -1,0 +1,48 @@
+#!/system/bin/sh
+
+LOGFILE=$1
+PROP=/system/bin/getprop
+BB=/system/xbin/busybox
+
+echo "-- applying CPU tweaks (delay re-evaluation of CPU speeds for interactive governor)" | tee -a $LOGFILE
+
+sysset () {
+    if [ -e "$2" ]; then
+        echo "-- echo $1 > $2" | tee -a $LOGFILE
+        echo "$1" > "$2"
+    else
+        echo "-- $2 does not exist" | tee -a $LOGFILE
+    fi
+}
+
+for i in 0 1 2 3 4 5 6 7; do
+    if [ -e "/sys/devices/system/cpu/cpu$i/cpufreq/scaling_governor" ]; then
+        GOV=`cat "/sys/devices/system/cpu/cpu$i/cpufreq/scaling_governor"`
+        if [ "$GOV" = "interactive" ]; then
+            if [ -e "/sys/devices/system/cpu/cpu$i/cpufreq/interactive/timer_rate" ]; then
+                sysset 100000 "/sys/devices/system/cpu/cpu$i/cpufreq/interactive/timer_rate"
+            else
+                echo "-- /sys/devices/system/cpu/cpu$i/cpufreq/interactive/timer_rate does not exist" | tee -a $LOGFILE
+            fi
+        else
+            "-- CPU[$i] does not have an interactive governor, not changing anything" | tee -a $LOGFILE
+        fi
+    else
+        echo "-- /sys/devices/system/cpu/cpu$i/cpufreq/scaling_governor does not exist" | tee -a $LOGFILE
+    fi
+done
+
+# boost highest speed to max frequency of the policy
+
+if [ -e /sys/devices/system/cpu/cpufreq/policy0/interactive/hispeed_freq ]; then
+    if [ -e /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq ]; then
+        MAX=`cat /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq`
+        sysset "$MAX" /sys/devices/system/cpu/cpufreq/policy0/interactive/hispeed_freq
+    fi
+fi
+if [ -e /sys/devices/system/cpu/cpufreq/policy4/interactive/hispeed_freq ]; then
+    if [ -e /sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq ]; then
+        MAX=`cat /sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq`
+        sysset "$MAX" /sys/devices/system/cpu/cpufreq/policy4/interactive/hispeed_freq
+    fi
+fi

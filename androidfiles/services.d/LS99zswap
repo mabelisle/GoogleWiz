@@ -1,0 +1,6 @@
+#!/system/bin/sh
+
+LOGFILE=$1
+
+echo "-- echo N > /sys/module/zswap/parameters/enabled" | tee -a $LOGFILE
+echo Y > /sys/module/zswap/parameters/enabled

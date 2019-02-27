@@ -1,0 +1,11 @@
+#!/system/bin/sh
+
+echo "Setting permissions on /system/app"
+find /system/app/ -type d -exec chmod 755 {} \;
+find /system/app/ -type f -exec chmod 644 {} \;
+find /system/app/ -exec chown 0.0 {} \;
+
+echo "Setting permissions on /system/priv-app"
+find /system/priv-app/ -type d -exec chmod 755 {} \;
+find /system/priv-app/ -type f -exec chmod 644 {} \;
+find /system/priv-app/ -exec chown 0.0 {} \;

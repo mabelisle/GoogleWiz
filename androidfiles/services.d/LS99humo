@@ -1,0 +1,25 @@
+#!/system/bin/sh
+
+LOGFILE=$1
+BB=/system/xbin/busybox
+HUMO=/sdcard/humotvgids-db.sqlite
+
+CNT=0
+while [ ! -d /sdcard/Android ]; do
+    CNT=$(( $CNT + 1 ))
+    sleep 1
+    # abort if we slept more than 20 seconds
+    if [ "$CNT" -eq 20 ]; then
+        echo "-- something is wrong(!), slept for > $CNT seconds waiting for /sdcard/Android" | tee -a $LOGFILE
+        echo "<<< Settings ended at $( date +"%Y%m%d - %H:%M:%S" )" | tee -a $LOGFILE
+        exit 1
+    fi
+done
+echo "-- slept for $CNT seconds waiting for /sdcard/Android" | tee -a $LOGFILE
+
+if [ -e "$HUMO" ]; then
+    echo "-- extracting $HUMO" | tee -a $LOGFILE
+    $BB cp "$HUMO" /data/data/be.humo.tvgids/databases/
+else
+    echo "-- $HUMO does not exist" | tee -a $LOGFILE
+fi

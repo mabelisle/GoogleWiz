@@ -1,0 +1,17 @@
+#!/system/bin/sh
+
+LOGFILE=$1
+
+sysset () {
+    if [ -e "$2" ]; then
+        echo "-- echo $1 > $2" | tee -a $LOGFILE
+        echo "$1" > "$2"
+    else
+        echo "-- $2 does not exist" | tee -a $LOGFILE
+    fi
+}
+
+paths=`ls /sys/devices/virtual/bdi/*/read_ahead_kb`;
+for S in $paths; do
+    sysset 512 "$S"
+done

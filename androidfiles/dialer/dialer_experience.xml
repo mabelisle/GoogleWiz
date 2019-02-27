@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+    <!-- to get play store updates -->
+    <feature name="com.google.android.apps.dialer.SUPPORTED" />
+</config>
+

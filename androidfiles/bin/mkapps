@@ -1,0 +1,28 @@
+#!/system/bin/sh
+
+rm -rf /sdcard/apps.tar
+cd /
+echo "Creating /sdcard/apps.tar"
+tar cfp /sdcard/apps.tar system/app/My* system/priv-app/My*
+
+rm -rf /sdcard/sapps.tar
+cd /
+# preserve selinux while making tar (p option)
+echo "Creating /sdcard/sapps.tar"
+tar cfp /sdcard/sapps.tar \
+    /system/app/CaptivePortalLogin/ \
+    /system/app/FilterProvider/ \
+    /system/priv-app/AODService_v30/ \
+    /system/priv-app/BlueLightFilter/ \
+    /system/priv-app/GooglePackageInstaller/ \
+    /system/priv-app/GoogleOneTimeInitializer/ \
+    /system/priv-app/GoogleServicesFramework/ \
+    /system/priv-app/MsgCommService/ \
+    /system/priv-app/SamsungCamera7/ \
+    /system/priv-app/SamsungContactsProvider90UPG/ \
+    /system/priv-app/CMHProvider/ \
+    /system/priv-app/StickerProvider/ \
+    /system/priv-app/SmartManager_v5 2> /dev/null
+
+sync
+sync

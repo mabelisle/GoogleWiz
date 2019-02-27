@@ -1,0 +1,60 @@
+#!/system/bin/sh
+
+LOGFILE=$1
+CMD=/system/bin/cmd
+TB=/system/bin/toybox
+PROP=/system/bin/getprop
+CF=/sdcard/googlewiz.config
+FOUND=false
+CNT=0
+PM=/system/bin/pm
+
+$CMD settings put secure sysui_qqs_count 5
+
+CNT=0
+while [ ! -d /sdcard/Android ]; do
+    CNT=$(( $CNT + 1 ))
+    sleep 1
+    # abort if we slept more than 20 seconds
+    if [ "$CNT" -eq 20 ]; then
+        echo "-- something is wrong(!), slept for > $CNT seconds waiting for /sdcard/Android" | tee -a $LOGFILE
+        echo "<<< Settings ended at $( date +"%Y%m%d - %H:%M:%S" )" | tee -a $LOGFILE
+        exit 1
+    fi
+done
+echo "-- slept for $CNT seconds waiting for /sdcard/Android" | tee -a $LOGFILE
+
+if [ -f "$CF" ]; then
+    # first convert it to linux line endings
+    echo "-- converting googlewiz.config to UNIX file format" | tee -a $LOGFILE
+    /system/bin/dos2unix "$CF"
+    # parse the config file and delete what we don't need (assuming /system is still mounted)
+    while IFS='' read -r line || [[ -n "$line" ]]; do
+        echo "-- found: $line" | tee -a $LOGFILE
+        if [ "$line" == "immersive=navbar" ]; then
+            $CMD settings put global policy_control immersive.navigation=*
+            echo "-- immersive=navbar found in googlewiz.config" | tee -a $LOGFILE
+            FOUND=true
+        fi
+        if [ "$line" == "immersive=full" ]; then
+            $CMD settings put global policy_control immersive.full=*
+            echo "-- immersive=full found in googlewiz.config" | tee -a $LOGFILE
+            FOUND=true
+        fi
+        if [ "$line" == "immersive=none" ]; then
+            echo "-- immersive=none found in googlewiz.config" | tee -a $LOGFILE
+            FOUND=false
+        fi
+    done < "$CF"
+else
+   echo "-- no googlewiz.config file found on /sdcard/" | tee -a $LOGFILE
+fi
+if [ "$FOUND" == "false" ]; then
+    echo "-- no immersive declaration found in googlewiz.config" | tee -a $LOGFILE
+    $CMD settings put global policy_control immersive.navigation=
+    $CMD settings put global policy_control immersive.full=
+fi
+
+# disable the downloadable fonts provider => this wil cause contacts/phone app to use system font instead of downloading Google Sans
+$PM disable 'com.google.android.gms/com.google.android.gms.fonts.provider.FontsProvider'
+echo "-- disabling com.google.android.gms.fonts.provider.FontsProvider" | tee -a $LOGFILE

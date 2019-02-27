@@ -1,0 +1,8 @@
+#!/system/bin/sh
+
+for pkg in `cmd overlay list | grep Swift | awk '{print $2}'`; do
+    cmd overlay disable $pkg
+    echo "Removing package $pkg"
+    pm uninstall $pkg > /dev/null
+done
+

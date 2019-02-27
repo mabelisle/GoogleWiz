@@ -1,0 +1,1118 @@
+Manifest-Version: 1.0
+Created-By: 1.0 (Android SignApk)
+
+Name: system/omc/MOB/etc/enforcedeletepackage.txt
+SHA1-Digest: 55WrqfvT30xysqGii3iaf/gFhOM=
+
+Name: system/omc/VGR/customer.xml
+SHA1-Digest: +qK7zmnKzjq4Ia6fDURRmhT1On4=
+
+Name: system/omc/ATL/etc/enforcedeletepackage.txt
+SHA1-Digest: PB5Fdb2M1PXLFDPtd+X9NgtMV2A=
+
+Name: system/omc/VDF/cscfeature_network.xml
+SHA1-Digest: FdqXwhjOTXQ1X+/4WWVkGWvj1dI=
+
+Name: system/omc/SWC/etc/enforceskippingpackages.txt
+SHA1-Digest: asjtp4HlH8tdd+SjgIkKArzRmE0=
+
+Name: system/omc/sipdb/Samsung_1102_r1-1_HUlsUN_xt9_HC_ALM3.ldb
+SHA1-Digest: BAhJS5NGNIzwRr1NhY3LhAtDgJ0=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_sys.bin
+SHA1-Digest: 24nGBKH7JqYAV1t5GdSa7Le/HHg=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_wb.bin
+SHA1-Digest: tWorApUAy347Do0zpHeigqhQ2rQ=
+
+Name: system/omc/XFV/cscfeature_network.xml
+SHA1-Digest: t9Dfw7ZpTHa4PJ9w67xVbi8vFBM=
+
+Name: system/omc/common_app/app/mtel_selfcare_app/mtel_selfcare_app.ap
+ k
+SHA1-Digest: NrAfT/qn6p0lZGscjU+hIlWNCa0=
+
+Name: system/omc/ATL/cscfeature.xml
+SHA1-Digest: kHLuVAxQilPcZJFuq7PvRXPWO8g=
+
+Name: system/omc/TCL/etc/permissions/privapp-permissions-com.vodafone.
+ vodafone360updates.xml
+SHA1-Digest: ivDBVkfKuyC/gvQY55o73PHbMms=
+
+Name: system/omc/common_app/priv-app/apt_Vodafone_StartOne_Katniss/apt
+ _Vodafone_StartOne_Katniss.apk
+SHA1-Digest: Ifk99mBsppIlZWlzkU4s69ekZCU=
+
+Name: system/omc/VD2/apps.xml
+SHA1-Digest: fJxUIIiwXr5EoSuf3lknTPJ9ob4=
+
+Name: system/omc/OMN/etc/enforcedeletepackage.txt
+SHA1-Digest: zywwO7PmYor0EGA7kkIX/TXZH7U=
+
+Name: system/omc/AVF/cscfeature_network.xml
+SHA1-Digest: dWlgWo/Cw+llQRDUAk3nrYPzdR0=
+
+Name: system/omc/VDC/default_application_order.xml
+SHA1-Digest: gDcSDM6wFLd/RgGakR9dGkTGI38=
+
+Name: system/omc/VDF/default_application_order.xml
+SHA1-Digest: JdwkYDoa1qp+IUuWXF95J2durMM=
+
+Name: system/omc/XFV/res/wallpaper/drawable/1920x1920-wallpapers-04.jp
+ g
+SHA1-Digest: 02F+T3JelGXfURMYJD6X+ZUH7Ow=
+
+Name: system/omc/sipdb/SOGOUDB/dummy.txt
+SHA1-Digest: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+
+Name: system/omc/MOB/cscfeature_network.xml
+SHA1-Digest: ywJPoI6mQmvbe3C20UyKv95ekqg=
+
+Name: system/omc/sipdb/SOGOUDB/supervisor
+SHA1-Digest: z+jEgOL8yzfg/4eD/PiLzRtlH2Q=
+
+Name: system/omc/VD2/etc/permissions/privapp-permissions-com.vodafone.
+ vodafone360updates.xml
+SHA1-Digest: ivDBVkfKuyC/gvQY55o73PHbMms=
+
+Name: system/omc/VDH/cscfeature.xml
+SHA1-Digest: /ufAWcw0wwxBVtF0hpYtpS6r41o=
+
+Name: system/omc/sipdb/Samsung_1102_r1-4_HRlsUN_xt9_ALM3.ldb
+SHA1-Digest: nlneM77L0VlrCAqsSIg1H/R18XY=
+
+Name: system/omc/VDH/etc/enforcedeletepackage.txt
+SHA1-Digest: 55WrqfvT30xysqGii3iaf/gFhOM=
+
+Name: system/omc/VDF/etc/VDF_keystrings.dat
+SHA1-Digest: /PTrTZb5k34C+XelCDePivxFBUs=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_sw_sys.bin
+SHA1-Digest: knFdBTn+ckltVMcXVVczNEOF6ho=
+
+Name: system/omc/MTL/etc/MTL_keystrings.dat
+SHA1-Digest: pDPr7daxYcf1MJDNIlYLd55xotQ=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_pred.bin
+SHA1-Digest: kYbH9BMUBsBOamvyhBG0EXdtqs0=
+
+Name: system/omc/common_app/app/instagram_stub/instagram_stub.apk
+SHA1-Digest: g010KID0MRCbn5ri9nkbaMYEnJ4=
+
+Name: system/omc/CNX/etc/contents.db
+SHA1-Digest: Lw1dh9c1Hb/RKr2YS86Ni+oB7FA=
+
+Name: system/omc/CNX/etc/enforceskippingpackages.txt
+SHA1-Digest: KfsihdLO+lsLHglErdCtvbJiLbk=
+
+Name: system/omc/VGR/default_workspace.xml
+SHA1-Digest: +EqVycjC+vnj1nx975Ms2zQozNM=
+
+Name: system/omc/VIP/default_application_order.xml
+SHA1-Digest: Alpphr9P4c1CaYnLc8m2frg1+Ck=
+
+Name: system/omc/VDF/etc/enforcedeletepackage.txt
+SHA1-Digest: 55WrqfvT30xysqGii3iaf/gFhOM=
+
+Name: system/omc/XFV/res/wallpaper/drawable/default_wallpaper.jpg
+SHA1-Digest: xyK0O6X1WTTtD06a6VmEoqM/dGE=
+
+Name: system/omc/OMN/etc/enforceskippingpackages.txt
+SHA1-Digest: d2rZeXTDNVtqrC4dKBYpxPUvWSE=
+
+Name: system/omc/ATL/etc/sales_code.dat
+SHA1-Digest: Uis8e8wA9I3UN/kHdCu8fojYFlI=
+
+Name: system/omc/CNX/etc/appmanager.conf
+SHA1-Digest: n5T7DkT2oXnuQpjfOJBiqKhZGl0=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_um.bin
+SHA1-Digest: 2i1ObGZTky0RfxJWXHPyUQNmsIg=
+
+Name: system/omc/VGR/etc/appmanager.conf
+SHA1-Digest: n5T7DkT2oXnuQpjfOJBiqKhZGl0=
+
+Name: system/omc/sipdb/Samsung_1102_r1-5_CSlsUN_xt9_ALM3.ldb
+SHA1-Digest: avHSk3Jzwj77jKG//ehcgYjYJSo=
+
+Name: system/omc/VDI/default_application_order.xml
+SHA1-Digest: KjnC9msYZqFKC8cgffCi7tSNhjQ=
+
+Name: system/omc/SWC/language.xml
+SHA1-Digest: ui7I7jQu4GLeIN7j2pMoKkUoaHA=
+
+Name: system/omc/VOD/omc.info
+SHA1-Digest: kA5NvUZTohDW75zVxWCIM7uPxYg=
+
+Name: system/omc/VDC/etc/contents.db
+SHA1-Digest: Lw1dh9c1Hb/RKr2YS86Ni+oB7FA=
+
+Name: system/omc/VDF/etc/contents.db
+SHA1-Digest: Lw1dh9c1Hb/RKr2YS86Ni+oB7FA=
+
+Name: system/omc/CNX/default_application_order.xml
+SHA1-Digest: MenefkZNJYA0/rjuQld8l54zrYg=
+
+Name: system/omc/VDI/etc/contents.db
+SHA1-Digest: Lw1dh9c1Hb/RKr2YS86Ni+oB7FA=
+
+Name: system/omc/CYV/etc/CYV_keystrings.dat
+SHA1-Digest: gJnyPt8XwNjeQNM4pcc2NX70Pds=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_bc.bin
+SHA1-Digest: cjybctpmLLVvTiFWjY7NiBSBqos=
+
+Name: system/omc/sipdb/SOGOUDB/trid_to_sim.bin
+SHA1-Digest: gfQ+BHfA7uGKjrYp+89kmRjrFgg=
+
+Name: system/omc/VDF/etc/enforceskippingpackages.txt
+SHA1-Digest: 9b1aGEurXfmeofE8b0JV+fAJY1k=
+
+Name: system/omc/VDI/cscfeature.xml
+SHA1-Digest: lJzxk56X5B9V2Xh/D+oAWtYVeog=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_pos.bin
+SHA1-Digest: yNWEYSgqPA/dUsU3vCeAIWB5mQg=
+
+Name: system/omc/sipdb/SOGOUDB/sogoucelldb/taobao.scel
+SHA1-Digest: EzrRXYkgedI5aNgopSJa2iEIpnU=
+
+Name: system/omc/ATL/etc/appmanager.conf
+SHA1-Digest: n5T7DkT2oXnuQpjfOJBiqKhZGl0=
+
+Name: system/omc/VOD/etc/appmanager.conf
+SHA1-Digest: n5T7DkT2oXnuQpjfOJBiqKhZGl0=
+
+Name: system/omc/MOB/default_application_order.xml
+SHA1-Digest: bqjTrFzmaHxrY+YqZR6RdZGhXH4=
+
+Name: system/omc/MTL/etc/enforcedeletepackage.txt
+SHA1-Digest: 55WrqfvT30xysqGii3iaf/gFhOM=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_ndata.bin
+SHA1-Digest: xMLshVIGrzk3chW4kiumOGgfMq4=
+
+Name: system/omc/SIM/cscfeature_network.xml
+SHA1-Digest: m/CTMHrIboFNGcR7xwEHCgHPdys=
+
+Name: system/omc/TCL/cscfeature_network.xml
+SHA1-Digest: JqeBCPOAjZKQ88+B2VMq9dFS7gw=
+
+Name: system/omc/sipdb/SOGOUDB/speex_sogou
+SHA1-Digest: CJ5s+1Lj5PkwFqV93ZtewjptmQk=
+
+Name: system/omc/VOD/default_application_order.xml
+SHA1-Digest: z6Ps7z4ipiekQTKuyoWQu+jBwnw=
+
+Name: system/omc/SIM/default_workspace.xml
+SHA1-Digest: BDSIZv+Gc2gFsc1iz/eEwadcEOo=
+
+Name: system/omc/TCL/etc/appmanager.conf
+SHA1-Digest: n5T7DkT2oXnuQpjfOJBiqKhZGl0=
+
+Name: system/omc/VDI/etc/appmanager.conf
+SHA1-Digest: n5T7DkT2oXnuQpjfOJBiqKhZGl0=
+
+Name: system/omc/OMN/etc/contents.db
+SHA1-Digest: Lw1dh9c1Hb/RKr2YS86Ni+oB7FA=
+
+Name: system/omc/ATL/default_workspace.xml
+SHA1-Digest: CrWCeIpJhiPx4NmXvEJtP6O9Vos=
+
+Name: system/omc/AVF/etc/contents.db
+SHA1-Digest: Lw1dh9c1Hb/RKr2YS86Ni+oB7FA=
+
+Name: system/omc/CYV/default_workspace.xml
+SHA1-Digest: BDSIZv+Gc2gFsc1iz/eEwadcEOo=
+
+Name: system/omc/ATL/default_application_order.xml
+SHA1-Digest: u8pv8bK05hyZwpp3m3pvk45RsNw=
+
+Name: system/omc/OMN/etc/sales_code.dat
+SHA1-Digest: K0WnbAyrsXwNEx8msPpfX/Kwn8Q=
+
+Name: system/omc/common_app/app/MyVodafone_CNX/MyVodafone_CNX.apk
+SHA1-Digest: XYIpxKAtLiEj2TBUyqPRGGm/Mso=
+
+Name: system/omc/common_app/omc_apks_list.txt
+SHA1-Digest: AAfRmy5y27IG/7nEQZSZLoHRluc=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_smile.bin
+SHA1-Digest: aKLGIGtQFwHLIgWWqhX40GP6Hs8=
+
+Name: system/omc/sipdb/SOGOUDB/sys_en.bin
+SHA1-Digest: NwA9Lfy6J/JHTZX373w44Yc7M5Q=
+
+Name: system/omc/PRO/apps.xml
+SHA1-Digest: FFuyyRhZDjP18CcVzhjYMmR9zx4=
+
+Name: system/omc/MOB/etc/enforceskippingpackages.txt
+SHA1-Digest: cq/FskerLIfF8txl0Gl3cyyUbDY=
+
+Name: system/omc/MTL/customer.xml
+SHA1-Digest: k1YzmyollhCW272Jx+Wl5bOWtqs=
+
+Name: system/omc/VIP/etc/enforcedeletepackage.txt
+SHA1-Digest: 55WrqfvT30xysqGii3iaf/gFhOM=
+
+Name: system/omc/common_app/app/My_Vodafone_PT/My_Vodafone_PT.apk
+SHA1-Digest: QWcHb8kCYkOXWD9QXBpafV15C4M=
+
+Name: system/omc/sipdb/SOGOUDB/sogoucelldb/diannaopinpai.scel
+SHA1-Digest: fE3TYpoieG+rPSUVIsQhWpdEmLc=
+
+Name: system/omc/sipdb/Samsung_1102_r1-12_ENubUNUK_xt9_ALM3.ldb
+SHA1-Digest: lL8kepAUAlRDb5UPk3ThXBdMbdg=
+
+Name: system/omc/VGR/etc/VGR_keystrings.dat
+SHA1-Digest: VcgW7fX1kDX38mVzjo2JzVhduOc=
+
+Name: system/omc/VOD/default_workspace.xml
+SHA1-Digest: U9+kGQX8lyM2viOsBRkWIJWOrF0=
+
+Name: system/omc/sipdb/Samsung_1102_r1-4_BGlsUN_xt9_ALM3.ldb
+SHA1-Digest: TaF8dWjs0CuEGk0Yep1yOxSOx+Q=
+
+Name: system/omc/TCL/default_application_order.xml
+SHA1-Digest: uLnYWCIQ8irIf2WRsD6GryDDqGk=
+
+Name: system/omc/code
+SHA1-Digest: TCoyXLi/ti8HpA+Ku7yTFPqcUgQ=
+
+Name: system/omc/VD2/etc/sales_code.dat
+SHA1-Digest: uW5ScvmWZt9ixEh5l+j0kqSZOM8=
+
+Name: system/omc/SIM/etc/enforcedeletepackage.txt
+SHA1-Digest: 55WrqfvT30xysqGii3iaf/gFhOM=
+
+Name: META-INF/com/google/android/updater-script
+SHA1-Digest: PoEBFw+wYZFNIGntpwIKdlon9Dk=
+
+Name: system/omc/sipdb/Samsung_1102_r1-5_SLlsUN_xt9_ALM3.ldb
+SHA1-Digest: Fip+OZp36h2WMN6rcFTnMYbQjiU=
+
+Name: system/omc/VDC/customer.xml
+SHA1-Digest: X2bjMFKmyhV5DML2x42f7gWOaYc=
+
+Name: system/omc/CYV/etc/contents.db
+SHA1-Digest: Lw1dh9c1Hb/RKr2YS86Ni+oB7FA=
+
+Name: system/omc/TCL/etc/contents.db
+SHA1-Digest: Lw1dh9c1Hb/RKr2YS86Ni+oB7FA=
+
+Name: system/omc/CYV/etc/enforceskippingpackages.txt
+SHA1-Digest: V6+LjQAN9H+qzy7OiRjPqMlxpLI=
+
+Name: system/omc/VDC/etc/VDC_keystrings.dat
+SHA1-Digest: kHlA8o5yH51WS4n4RgGamugaUX8=
+
+Name: system/omc/VDH/etc/sales_code.dat
+SHA1-Digest: uILV8F3mW3PrO64Mj62SVh3Trd4=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_em.bin
+SHA1-Digest: ZmvQvuqYzmZIhhN/jLf129nulUw=
+
+Name: system/omc/MOB/default_workspace.xml
+SHA1-Digest: UCcxbC3ef6s6fx1JIK8KMivv9KE=
+
+Name: system/omc/CYV/etc/enforcedeletepackage.txt
+SHA1-Digest: 55WrqfvT30xysqGii3iaf/gFhOM=
+
+Name: system/omc/PRO/etc/csc_ringtones_list.txt
+SHA1-Digest: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_ip.bin
+SHA1-Digest: XyU0XyL3YbIPKtDmfTH5OSDTd3c=
+
+Name: system/omc/SIM/etc/SIM_keystrings.dat
+SHA1-Digest: D69Sz3tUAOLUprCBIyZ7aCLcl3w=
+
+Name: system/omc/VDC/omc.info
+SHA1-Digest: 7ijzWF4E7CiASqxfdGqxPA3JlQE=
+
+Name: system/omc/VIP/default_workspace.xml
+SHA1-Digest: /7YNt7UBp+65XdE+NWSSh7++h7Q=
+
+Name: system/omc/CYV/customer.xml
+SHA1-Digest: zbY/1Jr8XBZClh045KODvNCPlW0=
+
+Name: system/omc/common_app/app/mein/mein.apk
+SHA1-Digest: wxltjJG8WOt24cpjKz8B7Co3qMs=
+
+Name: system/omc/ATL/omc.info
+SHA1-Digest: FgZoivi3gtqi38HAVcH/9hFTSGQ=
+
+Name: system/omc/VGR/etc/sales_code.dat
+SHA1-Digest: mwPeoQBT93kuydGp7u64+SUjHHk=
+
+Name: system/omc/PRO/res/media/audio/ringtones/Proximus Ringtone 01 - 
+ Dance.mp3
+SHA1-Digest: j6PjJZ0i0+RvkAoTGH+UMDNayDg=
+
+Name: system/omc/VDI/etc/VDI_keystrings.dat
+SHA1-Digest: 8QA/6EOM1iCZxV/2Xb931XghHNc=
+
+Name: system/omc/CNX/apps.xml
+SHA1-Digest: hSrOJmJ/Pc8w8cMCJq94HZwvtkI=
+
+Name: system/omc/VDI/cscfeature_network.xml
+SHA1-Digest: Zr45sl4udftkK6a87TFamBU6Nos=
+
+Name: system/omc/VDI/omc.info
+SHA1-Digest: GL8F5zqMDXcxi8s35wc55cT4M2g=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_bsa.bin
+SHA1-Digest: 9N00XCcrFEtXvSWKe6v9ExNa7dg=
+
+Name: system/omc/PRO/etc/enforcedeletepackage.txt
+SHA1-Digest: 55WrqfvT30xysqGii3iaf/gFhOM=
+
+Name: system/omc/XFV/omc.info
+SHA1-Digest: 51TxKZoJJOGMwOrxmB/nX4ptomM=
+
+Name: system/omc/VIP/etc/VIP_keystrings.dat
+SHA1-Digest: JLbH6BoK0ItACproxyTF50wbJOk=
+
+Name: system/omc/TCL/default_workspace.xml
+SHA1-Digest: hPwIdTlKWroih+wkyOj1akcbt4M=
+
+Name: system/omc/sipdb/SOGOUDB/rand.bin
+SHA1-Digest: nZgQm7WD6Ho8BODKg9EzePeshts=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_uc.bin
+SHA1-Digest: 7Btq3yk+WuNUSrNIml8atLBFj50=
+
+Name: system/omc/VDC/default_workspace.xml
+SHA1-Digest: 8HxwlfQY9l0bvzH+XbIKCREuqtI=
+
+Name: system/omc/SIM/default_application_order.xml
+SHA1-Digest: R1KOkhQsWVeKN0o0rX4nRVPRbDA=
+
+Name: SEC-INF/buildinfo.xml
+SHA1-Digest: Piv7kRC8pc8KVFaR7/GcAqe2BaM=
+
+Name: system/omc/VGR/etc/permissions/privapp-permissions-com.vodafone.
+ vodafone360updates.xml
+SHA1-Digest: ivDBVkfKuyC/gvQY55o73PHbMms=
+
+Name: system/omc/TCL/etc/enforceskippingpackages.txt
+SHA1-Digest: wu8oDQF7caJWhUTCZ5HoBv1Bb4w=
+
+Name: system/omc/omc_changetype
+SHA1-Digest: vkrDXfk2QMtgvOvS6g/jcxyVviY=
+
+Name: system/omc/sipdb/Samsung_1102_r1-5_ELusUN_xt9_ALM3.ldb
+SHA1-Digest: Sl2PVWcS4iQyQxo4RHYWBjTkeeY=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_InputStr.bin
+SHA1-Digest: F2F0lnoWR/wemUdQAv8nZS5ZLd0=
+
+Name: system/omc/VDH/etc/VDH_keystrings.dat
+SHA1-Digest: L/e94XWsQQereIItlPjiXFyoW/A=
+
+Name: system/omc/VD2/default_workspace.xml
+SHA1-Digest: DNSGnNmqTOVOuHMxgbgJrcBlmfI=
+
+Name: system/omc/VIP/customer.xml
+SHA1-Digest: 6TZ8/Zk4s/thoHh2M0Ug3kgpgd8=
+
+Name: system/omc/VD2/omc.info
+SHA1-Digest: IZwesDsPPFRc19eF7YA7O6B4Ifk=
+
+Name: system/omc/sipdb/Samsung_1102_r1-1_PTusUNPT_xt9_ALM3.ldb
+SHA1-Digest: I2UIntNCLFVOkEo/voRX49ilOko=
+
+Name: system/omc/common_app/app/com_zentity_VDC/com_zentity_VDC.apk
+SHA1-Digest: QGH9fdPKtjInWyL8eOo+pJ/K5cc=
+
+Name: system/omc/VIP/omc.info
+SHA1-Digest: R0EqtuV7CHeiLqFYre16WUCVOdY=
+
+Name: system/omc/VOD/cscfeature.xml
+SHA1-Digest: Q2xPuSbT6BEj6RbAYpmQa6xtRK8=
+
+Name: system/omc/VDC/etc/appmanager.conf
+SHA1-Digest: n5T7DkT2oXnuQpjfOJBiqKhZGl0=
+
+Name: system/omc/XFV/res/wallpaper/drawable/1920x1920-wallpapers-01.jp
+ g
+SHA1-Digest: xyK0O6X1WTTtD06a6VmEoqM/dGE=
+
+Name: system/omc/VGR/omc.info
+SHA1-Digest: SFZV7fKtqnneE4p4cjrpKj/BJVM=
+
+Name: system/omc/AVF/etc/AVF_keystrings.dat
+SHA1-Digest: chgLFxJgzufpC5D2wiL74PSr7ec=
+
+Name: system/omc/AVF/etc/appmanager.conf
+SHA1-Digest: n5T7DkT2oXnuQpjfOJBiqKhZGl0=
+
+Name: system/omc/PRO/cscfeature_network.xml
+SHA1-Digest: P9TID+aPOT1mEhu6IRaPWC/ClQw=
+
+Name: system/omc/PRO/etc/sales_code.dat
+SHA1-Digest: ozphM7S544Cnr7DObqDFt+wxBtI=
+
+Name: system/omc/VDH/customer.xml
+SHA1-Digest: q5IXdNy6jKSgCN/7F1dpkWrN3dw=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_tb.bin
+SHA1-Digest: 6Av/2JwM+5OY+BMdII/fydFmQl0=
+
+Name: system/omc/MTL/etc/contents.db
+SHA1-Digest: Lw1dh9c1Hb/RKr2YS86Ni+oB7FA=
+
+Name: system/omc/VIP/cscfeature_network.xml
+SHA1-Digest: cvcthnIOR3EYyQUFaeWBQebIbmE=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_qr.bin
+SHA1-Digest: eZ3x3L1NWIgNSjKh1Qr4qhRTPs8=
+
+Name: system/omc/VD2/cscfeature_network.xml
+SHA1-Digest: ivd08aLT7m+wEOkQFaO7tweyLtE=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_splt.bin
+SHA1-Digest: pTabSDKsRYAiFzE26sl9nPNkPVI=
+
+Name: system/omc/CYV/default_application_order.xml
+SHA1-Digest: 0YyypaaOprNxSSXwjHZOtJIXeys=
+
+Name: system/omc/XFV/res/media/bootsamsung.qmg
+SHA1-Digest: 7U+1ogOXTOXys5kU0AZ1X3X6BBY=
+
+Name: system/omc/OMN/etc/permissions/privapp-permissions-com.vodafone.
+ vodafone360updates.xml
+SHA1-Digest: ivDBVkfKuyC/gvQY55o73PHbMms=
+
+Name: system/omc/PRO/etc/PRO_keystrings.dat
+SHA1-Digest: J0VZVciw04kD9DUwBFehKy/8Qfo=
+
+Name: system/omc/sipdb/SOGOUDB/error_trace
+SHA1-Digest: dxgeh73GepWpLfOwMo9XINWQrQ0=
+
+Name: system/omc/sipdb/Samsung_1102_r1-18_ITusUN_xt9_ALM3.ldb
+SHA1-Digest: fnk+ob6bT6WiAwMsq6E1CDiA50M=
+
+Name: system/omc/XFV/etc/sales_code.dat
+SHA1-Digest: qyiK+xmhq0WCR98L/vrAXXna88Y=
+
+Name: system/omc/sipdb/Samsung_1200_r1-18_DEusUN_xt9_ALM3.ldb
+SHA1-Digest: ByTL9OHBPlvdJ2yhXD+clp1ihKk=
+
+Name: system/omc/VD2/etc/enforcedeletepackage.txt
+SHA1-Digest: 55WrqfvT30xysqGii3iaf/gFhOM=
+
+Name: system/omc/TCL/cscfeature.xml
+SHA1-Digest: 3fraPZsom+GnUdlVemJVTbDGI3w=
+
+Name: system/omc/CYV/cscfeature_network.xml
+SHA1-Digest: MIdSjhEvfEdZL5tNjaMYhAcdRV4=
+
+Name: system/omc/TCL/etc/TCL_keystrings.dat
+SHA1-Digest: PvSieYAtr0jDj567DKCSiBYDNLw=
+
+Name: system/omc/VIP/etc/contents.db
+SHA1-Digest: Lw1dh9c1Hb/RKr2YS86Ni+oB7FA=
+
+Name: system/omc/CNX/etc/CNX_keystrings.dat
+SHA1-Digest: daSQ6mJiOUizY2+U+ChmdzAQFww=
+
+Name: system/omc/VD2/default_application_order.xml
+SHA1-Digest: DeR0KK/+0qVeN7br05Hg7aJemlk=
+
+Name: system/omc/common_app/app/MyVodafone_OMN/MyVodafone_OMN.apk
+SHA1-Digest: Wpf4q5gJ/4KmOxtEo0+8gkelAQo=
+
+Name: system/omc/VD2/etc/appmanager.conf
+SHA1-Digest: n5T7DkT2oXnuQpjfOJBiqKhZGl0=
+
+Name: system/omc/sipdb/SOGOUDB/sogoucelldb/luntanyongyu.scel
+SHA1-Digest: egSMMMH9e+gZQ43e0gboII7mA+k=
+
+Name: system/omc/common_app/app/VFAL_MyVodafone_AVF/VFAL_MyVodafone_AV
+ F.apk
+SHA1-Digest: w4oQ7oyv3HYEDfTee+2W9qoPtS4=
+
+Name: system/omc/ATL/etc/ATL_keystrings.dat
+SHA1-Digest: Kn0JZuo1INHrlr8hgf3o5ES+Hpg=
+
+Name: system/omc/ATL/etc/enforceskippingpackages.txt
+SHA1-Digest: qwBMOGNHidQjXhV7ExlVjBKzvR0=
+
+Name: system/omc/common_app/app/vfgr_myvf/vfgr_myvf.apk
+SHA1-Digest: k+RM4001Ve6Hm8D006k14NF9Ye4=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_aa.bin
+SHA1-Digest: 4xCZojjLRku/NTqgtoaLUoTw/Xw=
+
+Name: system/omc/VOD/etc/contents.db
+SHA1-Digest: Lw1dh9c1Hb/RKr2YS86Ni+oB7FA=
+
+Name: system/omc/sales_code_list.dat
+SHA1-Digest: VJuOvXkRFKzMpexOsNu1Hg4av8k=
+
+Name: system/omc/sipdb/Samsung_1102_r1-8_ESusUNES_xt9_ALM3.ldb
+SHA1-Digest: yTiIeZQhCCiihTtVKsw5qKV3T+o=
+
+Name: system/omc/SWC/etc/sales_code.dat
+SHA1-Digest: 8ezC5k1wJwD2tQY0uB/SNMMuyo4=
+
+Name: system/omc/XFV/apps.xml
+SHA1-Digest: 07XM+2Ag+ViN2YWAzeiymer91x4=
+
+Name: system/omc/sales_code.dat
+SHA1-Digest: uW5ScvmWZt9ixEh5l+j0kqSZOM8=
+
+Name: system/omc/OMN/cscfeature.xml
+SHA1-Digest: Z34BCH7SMnFq0XfzojT8vBpifGw=
+
+Name: system/omc/PRO/etc/enforceskippingpackages.txt
+SHA1-Digest: 3tHAWGmvfzCE0aamoX9tsAzPPCc=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_ma.bin
+SHA1-Digest: zz0RV+mFKD0J/wz1Ehfw2QXKFFQ=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_bigram.bin
+SHA1-Digest: iCJ0RF8XA6zcoKwvEGi5HD8I5RE=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_ucd.bin
+SHA1-Digest: 0fXLiRYOYRrh+nz1chU+YHu0VWw=
+
+Name: system/omc/VDC/etc/enforceskippingpackages.txt
+SHA1-Digest: 97n6PPVeGUz0aPTLOnbeBdcQBys=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_asso_trigger.bin
+SHA1-Digest: oSAno4Wh/T1o/HIh/BGJrBwbvDM=
+
+Name: system/omc/CYV/etc/sales_code.dat
+SHA1-Digest: Lszu+xx8GeNhfCQE+8Lk+vpj5Po=
+
+Name: system/omc/CSCVersion.txt
+SHA1-Digest: aMGmjt+Q7YmgxnfGMoO0Yp7CsZA=
+
+Name: system/omc/VOD/etc/enforcedeletepackage.txt
+SHA1-Digest: PB5Fdb2M1PXLFDPtd+X9NgtMV2A=
+
+Name: system/omc/XFV/default_workspace.xml
+SHA1-Digest: Mrc/g7zgmHQQA6BGDfwzcGpOzmQ=
+
+Name: system/omc/AVF/default_workspace.xml
+SHA1-Digest: tBkQ1YTU/U4bvBdiZPd6Q8tuKRU=
+
+Name: system/omc/AVF/etc/enforcedeletepackage.txt
+SHA1-Digest: 55WrqfvT30xysqGii3iaf/gFhOM=
+
+Name: system/omc/MTL/etc/enforceskippingpackages.txt
+SHA1-Digest: 55s/Lno47iHDUrcSIvdSs1t6o8w=
+
+Name: system/omc/VDF/etc/sales_code.dat
+SHA1-Digest: zwB6lPDQXoT318gTbzCGIpy9WmI=
+
+Name: system/omc/common_app/app/myvodafone_VDH/myvodafone_VDH.apk
+SHA1-Digest: Ez3h6NfTuESA+rVVLbjoLZ7PN2Y=
+
+Name: system/omc/VDI/customer.xml
+SHA1-Digest: ngPlTezK/0YON91MwcxPI8aKrZo=
+
+Name: system/omc/VGR/cscfeature.xml
+SHA1-Digest: mN2l8jX2olkqiT0INL5dGCHE5k8=
+
+Name: system/omc/VDF/omc.info
+SHA1-Digest: 4XgFshV5z1tEE7dqZXtQLD8z0Wc=
+
+Name: system/omc/sipdb/Samsung_1102_r1-6_NLusUN_xt9_ALM3.ldb
+SHA1-Digest: xpBBYhpfYJ38uKovoW3iJ6rtrpM=
+
+Name: system/omc/VDF/etc/appmanager.conf
+SHA1-Digest: n5T7DkT2oXnuQpjfOJBiqKhZGl0=
+
+Name: system/omc/PRO/res/media/audio/ringtones/Proximus Ringtone 02 - 
+ Jazz.mp3
+SHA1-Digest: Wd/gGsS0bX2jCYCbzn0uWlaZAZM=
+
+Name: system/omc/SWC/etc/SWC_keystrings.dat
+SHA1-Digest: K4wvhbXf5ZQ2Z/rwhrIzO+a+mgY=
+
+Name: system/omc/VDI/etc/enforcedeletepackage.txt
+SHA1-Digest: 55WrqfvT30xysqGii3iaf/gFhOM=
+
+Name: system/omc/MOB/omc.info
+SHA1-Digest: WKwlhg8H6eSG3RWd2WbR9tmmXAw=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_blflx.bin
+SHA1-Digest: wQ70NKO0L91CQQ+Tfar6fvTdCmw=
+
+Name: system/omc/sipdb/Samsung_1102_r1-5_ROlsUN_xt9_ALM3.ldb
+SHA1-Digest: D8kxNZJns5MgC4fc0ho4D0etxJk=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_py.bin
+SHA1-Digest: oy2BCsSPn/nVBUVzY0jG5QwPlnU=
+
+Name: system/omc/AVF/default_application_order.xml
+SHA1-Digest: a2E8yEWgdMUzhXQ68/5aiZJzmF8=
+
+Name: system/omc/MOB/etc/contents.db
+SHA1-Digest: Lw1dh9c1Hb/RKr2YS86Ni+oB7FA=
+
+Name: system/omc/MTL/etc/sales_code.dat
+SHA1-Digest: Mouf4SVn3s9tS165tGHH+3TWvGk=
+
+Name: system/omc/VIP/etc/sales_code.dat
+SHA1-Digest: PYlauiWCIVDhz8K8DaonB+5H7rc=
+
+Name: system/omc/SWC/cscfeature_network.xml
+SHA1-Digest: 1eLOPpVaGalIicluwHQ/nRVzuFs=
+
+Name: system/omc/sipdb/SOGOUDB/trid.bin
+SHA1-Digest: WC4WfU24qJijrsr2LOjsjXoWS4Q=
+
+Name: system/omc/VD2/etc/enforceskippingpackages.txt
+SHA1-Digest: 5vOZnIR2Wq013Z54YFC21EIejdQ=
+
+Name: system/omc/MOB/cscfeature.xml
+SHA1-Digest: uGFCtK89o8jVLrgolBnfcxHf1qA=
+
+Name: system/omc/XFV/etc/contents.db
+SHA1-Digest: Lw1dh9c1Hb/RKr2YS86Ni+oB7FA=
+
+Name: system/omc/SIM/etc/contents.db
+SHA1-Digest: Lw1dh9c1Hb/RKr2YS86Ni+oB7FA=
+
+Name: system/omc/XFV/res/wallpaper/drawable/1920x1920-wallpapers-02.jp
+ g
+SHA1-Digest: cf8TE3CX3Vd4MzSLWs4+NMA5sBA=
+
+Name: system/omc/MOB/etc/sales_code.dat
+SHA1-Digest: T/r2nsdfX3fGznIN6YRdAOSeyvU=
+
+Name: system/omc/SWC/customer.xml
+SHA1-Digest: OGJIJKPZeeYabgYHNBjoaIYPwMY=
+
+Name: system/omc/TCL/etc/enforcedeletepackage.txt
+SHA1-Digest: 55WrqfvT30xysqGii3iaf/gFhOM=
+
+Name: system/omc/AVF/cscfeature.xml
+SHA1-Digest: xF9Mn6F0wHWw/kThHoq2arcH2r4=
+
+Name: system/omc/AVF/etc/enforceskippingpackages.txt
+SHA1-Digest: MoHyTEG4mf+j9jYcezFH/8IeVJc=
+
+Name: system/omc/OMN/default_workspace.xml
+SHA1-Digest: T9ukYjIAtjnpkNpQ4QKZGuvfTXw=
+
+Name: system/omc/SWC/omc.info
+SHA1-Digest: wlCwNsS8/fvI7C+cKsl2F/8w5fc=
+
+Name: system/omc/VGR/etc/contents.db
+SHA1-Digest: Lw1dh9c1Hb/RKr2YS86Ni+oB7FA=
+
+Name: system/omc/common_app/app/mojvip/mojvip.apk
+SHA1-Digest: vp/JVfKM9/vF6RQwUU8eGA62lhc=
+
+Name: system/omc/SIM/omc.info
+SHA1-Digest: nu+PEMt2NU+vve9e0IQcEpRCH9g=
+
+Name: system/omc/OMN/etc/OMN_keystrings.dat
+SHA1-Digest: +wCvipEwRA897l8ypVOdMENzEFI=
+
+Name: system/omc/VDC/etc/permissions/privapp-permissions-com.vodafone.
+ vodafone360updates.xml
+SHA1-Digest: ivDBVkfKuyC/gvQY55o73PHbMms=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_abg.bin
+SHA1-Digest: UWJ6qwxMmaBeLuCIWyxLVYG1I9k=
+
+Name: system/omc/VDH/etc/appmanager.conf
+SHA1-Digest: n5T7DkT2oXnuQpjfOJBiqKhZGl0=
+
+Name: system/omc/common_app/app/MyVF_VOD/MyVF_VOD.apk
+SHA1-Digest: 3ibTegoZD65x8fXzGByB0tLqqbk=
+
+Name: system/omc/sipdb/SOGOUDB/sogoucelldb/huazhangpinpai.scel
+SHA1-Digest: 847I/u5uCC46aZCxcdT3PweYGWQ=
+
+Name: system/omc/CYV/cscfeature.xml
+SHA1-Digest: VT8zXe4Tzv7MDSiEuAl9IZEcdHo=
+
+Name: system/omc/OMN/default_application_order.xml
+SHA1-Digest: ExPwkM5u2daYA3G9Jjt+sSPQNf4=
+
+Name: system/omc/XFV/default_application_order.xml
+SHA1-Digest: l5a6ITQMltf8PctEvRyDDfnJO/U=
+
+Name: system/omc/VIP/etc/enforceskippingpackages.txt
+SHA1-Digest: wbgLU/usW5+3a9JCUjtn4bpdrAw=
+
+Name: system/omc/OMN/customer.xml
+SHA1-Digest: /3vyRPOlLwrGRKmUEbPZsVOjIWA=
+
+Name: system/omc/AVF/etc/permissions/privapp-permissions-com.vodafone.
+ vodafone360updates.xml
+SHA1-Digest: ivDBVkfKuyC/gvQY55o73PHbMms=
+
+Name: system/omc/XFV/customer.xml
+SHA1-Digest: /zuTdol34yQlDpnNoGitWUtvkXc=
+
+Name: system/omc/VDC/etc/sales_code.dat
+SHA1-Digest: TtWTe56AWDxSXrcbEt/THGm+qjg=
+
+Name: system/omc/SW_Configuration.xml
+SHA1-Digest: YGmP/TFsZsM0LBY68KU1lcmmeFE=
+
+Name: system/omc/OMN/omc.info
+SHA1-Digest: FZN9biZZ9zyrVqWEvBkCCPZWn4c=
+
+Name: system/omc/VGR/default_application_order.xml
+SHA1-Digest: gKTjrr3rNEzEIkBo42uABBhnw3s=
+
+Name: system/omc/SWC/cscfeature.xml
+SHA1-Digest: JBlDtYRakO2Ce271aZGscq37nrM=
+
+Name: system/omc/VDI/etc/sales_code.dat
+SHA1-Digest: y9p1tyokjPyJyPrkAggIcobEpNQ=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_zly.bin
+SHA1-Digest: fGzMAxa1QSAsSdfJ/OAnuL9cmfM=
+
+Name: system/omc/CNX/etc/permissions/privapp-permissions-com.vodafone.
+ vodafone360updates.xml
+SHA1-Digest: ivDBVkfKuyC/gvQY55o73PHbMms=
+
+Name: system/omc/TCL/omc.info
+SHA1-Digest: Mbns/FDfvIsVsB6qWm/ipnV59gg=
+
+Name: system/omc/VGR/cscfeature_network.xml
+SHA1-Digest: 42tlIF4dAHrRF9t+bQewanoGzio=
+
+Name: system/omc/VDH/default_workspace.xml
+SHA1-Digest: 7xGXr+O1r+cjTiwCvNkujdD78QQ=
+
+Name: system/omc/CNX/etc/enforcedeletepackage.txt
+SHA1-Digest: 55WrqfvT30xysqGii3iaf/gFhOM=
+
+Name: system/omc/AVF/etc/sales_code.dat
+SHA1-Digest: kBE0s+3F8DoVev11rW9kl+aoLLM=
+
+Name: system/omc/VDH/default_application_order.xml
+SHA1-Digest: YdlaXgYtjR1SGjmeO0kWHtUpVQc=
+
+Name: system/omc/MTL/cscfeature.xml
+SHA1-Digest: 3+EJE2+wH7MWBHHaq5FRDZ0Cly8=
+
+Name: system/omc/VOD/etc/permissions/privapp-permissions-com.vodafone.
+ vodafone360updates.xml
+SHA1-Digest: ivDBVkfKuyC/gvQY55o73PHbMms=
+
+Name: system/omc/VD2/etc/contents.db
+SHA1-Digest: Lw1dh9c1Hb/RKr2YS86Ni+oB7FA=
+
+Name: system/omc/SWC/etc/contents.db
+SHA1-Digest: Lw1dh9c1Hb/RKr2YS86Ni+oB7FA=
+
+Name: system/omc/ATL/etc/permissions/privapp-permissions-com.vodafone.
+ vodafone360updates.xml
+SHA1-Digest: ivDBVkfKuyC/gvQY55o73PHbMms=
+
+Name: system/omc/SIM/customer.xml
+SHA1-Digest: Pro+YDtxWsYw6D2hzteNE6Bwji0=
+
+Name: system/omc/VOD/etc/enforceskippingpackages.txt
+SHA1-Digest: B6mcVXniIqgnVz7j2YWCwFSRz1E=
+
+Name: system/omc/SWC/default_workspace.xml
+SHA1-Digest: BDSIZv+Gc2gFsc1iz/eEwadcEOo=
+
+Name: system/omc/VGR/etc/enforceskippingpackages.txt
+SHA1-Digest: 3cC9kyjMWbIX4ADSEQo9n625pG4=
+
+Name: system/omc/OMN/cscfeature_network.xml
+SHA1-Digest: fPgnLJbuhAJ7rr62esfwdaPqDBc=
+
+Name: system/omc/VDI/etc/permissions/privapp-permissions-com.vodafone.
+ vodafone360updates.xml
+SHA1-Digest: ivDBVkfKuyC/gvQY55o73PHbMms=
+
+Name: system/omc/AVF/customer.xml
+SHA1-Digest: YbG1+TP20dqwjSRncvRUrFQn83I=
+
+Name: system/omc/VD2/cscfeature.xml
+SHA1-Digest: 4xMp/RamXxDrrqQsgfV2oSiXm24=
+
+Name: system/omc/PRO/default_application_order.xml
+SHA1-Digest: CQXv9KRy9eE4BxhFPuVFET89Vhg=
+
+Name: system/omc/CNX/omc.info
+SHA1-Digest: yix7aC+VnfUsU+hdKWLVyPu3C90=
+
+Name: system/omc/sipdb/Samsung_1102_r1-4_SQlsUN_xt9_ALM3.ldb
+SHA1-Digest: 3tDoOw9by98cVc6bzzc0ybDCywY=
+
+Name: system/omc/common_app/app/app_productionflavor/app_productionfla
+ vor.apk
+SHA1-Digest: b3yzC53d5xNhNMvHy96FHMftyLY=
+
+Name: system/omc/VDH/etc/permissions/privapp-permissions-com.vodafone.
+ vodafone360updates.xml
+SHA1-Digest: ivDBVkfKuyC/gvQY55o73PHbMms=
+
+Name: system/omc/PRO/cscfeature.xml
+SHA1-Digest: gf0gdlQLtsc1lU8yh5Qz5Gr/ncU=
+
+Name: system/omc/ATL/cscfeature_network.xml
+SHA1-Digest: JzFTXgRHpsAzGA+ysA0ka+O+ed8=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_cf.bin
+SHA1-Digest: R20HM9PPWlM2/9QMD5mbYcQEhnM=
+
+Name: system/omc/VOD/etc/sales_code.dat
+SHA1-Digest: FV0AtWb7YXM0mKDB1EZtRb7owdc=
+
+Name: system/omc/CNX/etc/sales_code.dat
+SHA1-Digest: BsePBHKpzQhWHcNwE11LnCfTRKM=
+
+Name: system/omc/SWC/default_application_order.xml
+SHA1-Digest: KT7kT+lLnZCGVwhD+8aK2lO/reo=
+
+Name: system/omc/VGR/etc/enforcedeletepackage.txt
+SHA1-Digest: 55WrqfvT30xysqGii3iaf/gFhOM=
+
+Name: system/omc/PRO/res/media/audio/ringtones/Proximus Ringtone 03 - 
+ Classic.mp3
+SHA1-Digest: P6Y27SD4jmp0JK+ms4SIogucaNk=
+
+Name: system/omc/VDF/default_workspace.xml
+SHA1-Digest: BDSIZv+Gc2gFsc1iz/eEwadcEOo=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_bh.bin
+SHA1-Digest: z8bSAyp+hooaU+4aWQqmW75/Muw=
+
+Name: system/omc/sipdb/SOGOUDB/sogoucelldb/shoujirunajian.scel
+SHA1-Digest: QHsoaXnL/SQuykMWhDH/URJGuko=
+
+Name: system/omc/MTL/default_application_order.xml
+SHA1-Digest: 3jZffpm5qXdSC9qfFJGkKO9q0Lw=
+
+Name: system/omc/PRO/etc/contents.db
+SHA1-Digest: Lw1dh9c1Hb/RKr2YS86Ni+oB7FA=
+
+Name: system/omc/SIM/etc/sales_code.dat
+SHA1-Digest: HEPuLznq0fSr0Lr1eV8UnJTC7Lk=
+
+Name: system/omc/MOB/etc/MOB_keystrings.dat
+SHA1-Digest: dSoavkEE6Kyag/uoQMZ8AA9VPs0=
+
+Name: system/omc/MOB/customer.xml
+SHA1-Digest: eqxiITKyTWBxX6EjyULUPjo6vgc=
+
+Name: system/omc/XFV/res/wallpaper/drawable/1920x1920-wallpapers-03.jp
+ g
+SHA1-Digest: KocHSsXrH4bZ/vZssjTrWxuVK+E=
+
+Name: system/omc/SIM/cscfeature.xml
+SHA1-Digest: /aDqJF0oO1waYivf5Mj68b3EE2g=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_name.bin
+SHA1-Digest: O+pOw3dbEWW2iGIzS1BM56VAQz4=
+
+Name: META-INF/com/google/android/update-binary
+SHA1-Digest: hJ2+BKooprVRNL8MrBUzK6X+tnk=
+
+Name: system/omc/XFV/etc/enforceskippingpackages.txt
+SHA1-Digest: 6UMHm5IhW3Ujiw1GrCsXJ6sgaTY=
+
+Name: system/omc/VD2/etc/VD2_keystrings.dat
+SHA1-Digest: xZQDOrlK8MSnJGmhIV6DCfj7CcI=
+
+Name: system/omc/VDC/cscfeature_network.xml
+SHA1-Digest: yGHttwNr+HLmJma3hP9avZqZ0DQ=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_sp.bin
+SHA1-Digest: 7mZ5/LFpwKKCb0qeN7eFy575sNk=
+
+Name: system/omc/sipdb/SOGOUDB/sogoucelldb/Photoshop.scel
+SHA1-Digest: LOX3UoHmJWShR0ChJSTsBx0VEjo=
+
+Name: system/omc/OMN/apps.xml
+SHA1-Digest: JS9mZvSvwaic4KGQA46HwfS5V+I=
+
+Name: system/omc/CYV/omc.info
+SHA1-Digest: SvNBy29DqWy5zHt2sR+oSTNgh30=
+
+Name: system/omc/CNX/customer.xml
+SHA1-Digest: OfE8QA4TleckiIXXzLzg+35eLPE=
+
+Name: system/omc/TCL/etc/sales_code.dat
+SHA1-Digest: wm825RwosHa/XL/PHGgfdswFw9w=
+
+Name: system/omc/MTL/default_workspace.xml
+SHA1-Digest: 9NBK25WWN3XdlwH78jfxovMsSBU=
+
+Name: system/omc/sipdb/Samsung_1102_r1-21_FRusUN_xt9_ALM3.ldb
+SHA1-Digest: 53OHPWFJCWDUArjcZkoi8FEfZUc=
+
+Name: system/omc/CNX/cscfeature.xml
+SHA1-Digest: 1TYbgcv4OxIN20wS7HJIMikajNI=
+
+Name: system/omc/TCL/apps.xml
+SHA1-Digest: gGI1KVcTWAYOTuisPHWPCMPmiuQ=
+
+Name: system/omc/VDH/omc.info
+SHA1-Digest: BAIaH8S6oJIEVtYQkxp7LYQd0Z0=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_tam.bin
+SHA1-Digest: 1cl0yDMiL8lNi8N49KcKWem7quM=
+
+Name: system/omc/MTL/apps.xml
+SHA1-Digest: kgtl9DEa9gtXGMBe9x6YO4nLsL8=
+
+Name: system/omc/VDF/cscfeature.xml
+SHA1-Digest: t2ywELZxQwUcATLJF6pYLXFYk/0=
+
+Name: system/omc/common_app/app/samsung_rewards/samsung_rewards.apk
+SHA1-Digest: ymu+x7mKl7cFtuBUmmDM+mNLhmE=
+
+Name: system/omc/XFV/etc/XFV_keystrings.dat
+SHA1-Digest: f3bjE7yXUOKEGHBglVdubxYbUCA=
+
+Name: system/omc/TCL/customer.xml
+SHA1-Digest: 99WwNC24euwwzJg3P56a6cteWgk=
+
+Name: system/omc/VDH/cscfeature_network.xml
+SHA1-Digest: WIaDk2pYuIWQ5RJMPsHcyEViv+E=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_ex.bin
+SHA1-Digest: vW42tdGsf2/30iEbSmQq4JRY6Mw=
+
+Name: system/omc/CNX/cscfeature_network.xml
+SHA1-Digest: 2X8I5Bsi/+OQuzzMhsjiGS41Ifk=
+
+Name: system/omc/ATL/customer.xml
+SHA1-Digest: Gq1aNdxbyX5iXZ2as39DebNCFbc=
+
+Name: system/omc/PRO/omc.info
+SHA1-Digest: CY5wswLCVxPVU6+jSQDwvAgvBKc=
+
+Name: system/omc/VDH/etc/enforceskippingpackages.txt
+SHA1-Digest: uANHAPYLZs92iPtGlNmWdQZ7WpA=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_cagram.bin
+SHA1-Digest: Go5S3EVJnh593xIRW/JxD8GfGz4=
+
+Name: system/omc/VDF/customer.xml
+SHA1-Digest: iA3Q/glT0Z2H7kDTePXHA5QxyrA=
+
+Name: system/omc/common_app/app/IE_MyVodafone/IE_MyVodafone.apk
+SHA1-Digest: AJMBoyXvGL37f5+n20RVnsPQsuo=
+
+Name: system/omc/OMN/etc/appmanager.conf
+SHA1-Digest: n5T7DkT2oXnuQpjfOJBiqKhZGl0=
+
+Name: system/omc/SIM/apps.xml
+SHA1-Digest: F8zesp71g9N9eGtpWkp6G1dDIxc=
+
+Name: system/omc/VOD/cscfeature_network.xml
+SHA1-Digest: iVU8hZsE0WRpTmkF7tZ9yy+efOQ=
+
+Name: system/omc/common_app/app/MiVodafone_ATL_DropNoviembre/MiVodafon
+ e_ATL_DropNoviembre.apk
+SHA1-Digest: 8wCj8eq3ZmhPYxTPgRhkYn3EXgg=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_prefix_table.bin
+SHA1-Digest: 6drD1SSDZzd4KhYJsBVUaYeEKUw=
+
+Name: system/omc/VDI/etc/enforceskippingpackages.txt
+SHA1-Digest: aB+g0IUpHJHPOgJ1a0quL6BuQx0=
+
+Name: system/omc/MTL/cscfeature_network.xml
+SHA1-Digest: Z+soqHIzSlXaTE5zkbVNuu64PtI=
+
+Name: system/omc/VDI/default_workspace.xml
+SHA1-Digest: JXmDKOGUmjSf3/4/7sw1ptMSKzY=
+
+Name: system/omc/AVF/omc.info
+SHA1-Digest: t0SG03+Aop844DRp/BPM1VBGSLY=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_shw.bin
+SHA1-Digest: ilvoBjK+dXtMGOVH/YhGOxKEQIA=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_ui.bin
+SHA1-Digest: LPsdCjWWMXRgAe+umoLxVvFQSRY=
+
+Name: system/omc/PRO/default_workspace.xml
+SHA1-Digest: koNeXC+CZSL8zzG9LO7v3ALtKsg=
+
+Name: system/omc/SWC/etc/enforcedeletepackage.txt
+SHA1-Digest: PB5Fdb2M1PXLFDPtd+X9NgtMV2A=
+
+Name: system/omc/VDC/etc/enforcedeletepackage.txt
+SHA1-Digest: 55WrqfvT30xysqGii3iaf/gFhOM=
+
+Name: system/omc/sipdb/SOGOUDB/sogoucelldb/chengyusuyu.scel
+SHA1-Digest: 0O25YNFYFqPv7NbS0Ez4YVayiKo=
+
+Name: system/omc/PRO/customer.xml
+SHA1-Digest: 2tEE0JXsdRlp8y/tUUmERf9i4qs=
+
+Name: system/omc/MTL/omc.info
+SHA1-Digest: Zqs7PlGgHRpn2qExTqBjjj60hJk=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_aid.bin
+SHA1-Digest: KBsaAZmZ11pEXIxkUD8pcW3zZt8=
+
+Name: system/omc/CNX/default_workspace.xml
+SHA1-Digest: if+RSsrfHQwS+TZfdLnkb7yo+1I=
+
+Name: system/omc/XFV/etc/appmanager.conf
+SHA1-Digest: n5T7DkT2oXnuQpjfOJBiqKhZGl0=
+
+Name: system/omc/VDH/etc/contents.db
+SHA1-Digest: Lw1dh9c1Hb/RKr2YS86Ni+oB7FA=
+
+Name: system/omc/SIM/etc/enforceskippingpackages.txt
+SHA1-Digest: V6+LjQAN9H+qzy7OiRjPqMlxpLI=
+
+Name: system/omc/VOD/etc/VOD_keystrings.dat
+SHA1-Digest: lI8YQpx9MrKdvPzvEzwoAQRRWww=
+
+Name: system/omc/HWRDB/viresources.txt
+SHA1-Digest: ebynhnhh+TbYvbTerhmbu9ofaWU=
+
+Name: system/omc/VD2/customer.xml
+SHA1-Digest: kDDmyQq+oQt+pmLaIBK5pGRmVJE=
+
+Name: system/omc/XFV/res/media/video/shutdown/shutdown.qmg
+SHA1-Digest: Tvsz4pACafIJJYBjL8LIw+lu67A=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_bcd.bin
+SHA1-Digest: rLid9T2harBjiBSjMpsDKp/VdE0=
+
+Name: system/omc/sipdb/SOGOUDB/skinpacker
+SHA1-Digest: dYxWfsMGWDSYJrmnDcgL5RXpdec=
+
+Name: system/omc/VOD/customer.xml
+SHA1-Digest: nkMI/WVuO8vMeQM97aj+2QnfaOA=
+
+Name: system/omc/MOB/apps.xml
+SHA1-Digest: CiAKovn2vKNlpRGz2FAVKM1a6No=
+
+Name: system/omc/VDC/cscfeature.xml
+SHA1-Digest: yyCHEla+03rhk8FCzsfhZya7rUQ=
+
+Name: system/omc/XFV/cscfeature.xml
+SHA1-Digest: RVlnQQ6GUkimJIx6wTy8gYl+LYA=
+
+Name: system/omc/VIP/cscfeature.xml
+SHA1-Digest: 9U0qtHrOzUCzCXoy/zFwdD+28+o=
+
+Name: system/omc/XFV/etc/enforcedeletepackage.txt
+SHA1-Digest: 55WrqfvT30xysqGii3iaf/gFhOM=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_cor.bin
+SHA1-Digest: oQJ8/dOO0sd/k/QHS7Ke4VxOx1I=
+
+Name: system/omc/sipdb/SOGOUDB/sgim_sw_ts.bin
+SHA1-Digest: eEgpk6bGmRD1Z/7ys306y9Xwk10=
+
+Name: system/omc/ATL/etc/contents.db
+SHA1-Digest: Lw1dh9c1Hb/RKr2YS86Ni+oB7FA=
+

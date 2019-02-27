@@ -1,0 +1,39 @@
+#!/system/bin/sh
+
+LOGFILE=$1
+DAY=$( date +"%d" )
+CONTINUE=1
+
+if [ $DAY -eq 1 ]; then CONTINUE=0; fi
+if [ $DAY -eq 4 ]; then CONTINUE=0; fi
+if [ $DAY -eq 10 ]; then CONTINUE=0; fi
+if [ $DAY -eq 13 ]; then CONTINUE=0; fi
+if [ $DAY -eq 16 ]; then CONTINUE=0; fi
+if [ $DAY -eq 19 ]; then CONTINUE=0; fi
+if [ $DAY -eq 21 ]; then CONTINUE=0; fi
+if [ $DAY -eq 24 ]; then CONTINUE=0; fi
+if [ $DAY -eq 27 ]; then CONTINUE=0; fi
+if [ $DAY -eq 30 ]; then CONTINUE=0; fi
+
+if [ ! $CONTINUE -eq 1 ]; then
+    echo "** $0 no need to run on day $DAY" | tee -a $LOGFILE
+    exit 0
+fi
+
+for i in `find /data/dat* -iname "*.db"`; do
+    /system/xbin/sqlite3 $i 'VACUUM;'
+    resVac=$?
+    if [ $resVac == 0 ]; then
+        resVac="SUCCESS"
+    else
+        resVac="ERRCODE-$resVac"
+    fi
+    /system/xbin/sqlite3 $i 'REINDEX;'
+    resIndex=$?
+    if [ $resIndex == 0 ]; then
+        resIndex="SUCCESS"
+    else
+        resIndex="ERRCODE-$resIndex"
+    fi
+    echo "-- DB: $i VACUUM=$resVac REINDEX=$resIndex" | tee -a $LOGFILE
+done

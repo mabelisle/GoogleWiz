@@ -1,0 +1,9 @@
+#!/system/bin/sh
+
+CMD=/system/bin/cmd
+
+echo "Changing settings"
+
+$CMD settings put global navigationbar_current_color -16777216
+
+echo "Changing settings complete"

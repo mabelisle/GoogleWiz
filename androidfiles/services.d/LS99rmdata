@@ -1,0 +1,17 @@
+#!/system/bin/sh
+
+LOGFILE=$1
+BB=/system/xbin/busybox
+
+dodatarm() {
+    echo "-- rm -rf $1" | tee -a $LOGFILE
+    $BB rm -rf "$1"
+}
+
+dodatarm /data/knox/
+dodatarm /data/bootchart/
+dodatarm /data/DownFilters/
+dodatarm /data/cache/recovery/
+dodatarm /data/cache/backup/
+dodatarm /data/cache/backup_stage/
+
