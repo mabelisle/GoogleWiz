@@ -930,7 +930,8 @@ main()
 
   if [ -e ./mini ]; then
     echo "Installing Google base to system/app and system/priv-app"
-    tar xf ~/googlewiz/androidfiles/apps.tar
+    cp -r ~/GoogleWiz-Apps/apps/system ~/GoogleWiz
+    #tar xf ~/googlewiz/androidfiles/apps.tar #(mabelisle) Move apps to repo 2019-02-26
     #remove system/priv-app/MyFileManager #(mabelisle) File Missing 2019-02-23
     #remove system/priv-app/MyLauncherKey #(mabelisle) File Missing 2019-02-23
     #remove system/priv-app/MySystemInfo #(mabelisle) File Missing 2019-02-23
@@ -1176,11 +1177,15 @@ main()
     if [ ! -e ./noreplace ]
     then
       echo "Replacing Samsung APKs with newer versions"
-      for file in `tar tvf ~/googlewiz/androidfiles/sapps.tar  | awk '{print $6}' | sed 's#/# #g' | awk '{print $3'} | sort | uniq`; do
-        rm -rf system/app/$file
-        rm -rf system/priv-app/$file
-      done
-		tar xf ~/googlewiz/androidfiles/sapps.tar
+      find ../GoogleWiz-Apps/sapps/system/app/* system/app/* -maxdepth 0 -type d | awk -F/ '{D[$NF]++} END {for (d in D) if (D[d]>1) print "rm -rf system/app/" d}' | sh
+      find ../GoogleWiz-Apps/sapps/system/priv-app/* system/priv-app/* -maxdepth 0 -type d | awk -F/ '{D[$NF]++} END {for (d in D) if (D[d]>1) print "rm -rf system/priv-app/" d}' | sh
+
+      #for file in `tar tvf ~/googlewiz/androidfiles/sapps.tar  | awk '{print $6}' | sed 's#/# #g' | awk '{print $3'} | sort | uniq`; do
+      #  rm -rf system/app/$file
+      #  rm -rf system/priv-app/$file
+      #done
+    cp -r ~/GoogleWiz-Apps/sapps/system ~/GoogleWiz
+		#tar xf ~/googlewiz/androidfiles/sapps.tar
     fi
   fi
 
