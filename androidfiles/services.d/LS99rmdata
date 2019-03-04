@@ -11,7 +11,7 @@ dodatarm() {
 dodatarm /data/knox/
 dodatarm /data/bootchart/
 dodatarm /data/DownFilters/
-dodatarm /data/cache/recovery/
-dodatarm /data/cache/backup/
-dodatarm /data/cache/backup_stage/
+#dodatarm /data/cache/recovery/ (mabelisle) Fix for Google Backup 03-03-2019
+#dodatarm /data/cache/backup/ (mabelisle) Fix for Google Backup 03-03-2019
+#dodatarm /data/cache/backup_stage/ (mabelisle) Fix for Google Backup 03-03-2019
 

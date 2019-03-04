@@ -64,7 +64,7 @@ $RM -rf /data/*.txt
 $RM -rf /data/anr/*.log
 $RM -rf /data/anr/*.txt
 $RM -rf /data/backup/pending/*.tmp
-#$RM -rf /data/cache/*.* (mabelisle) Fix for Google Backup 03-03-2019
+$RM -rf /data/cache/*.*
 $RM -rf /data/dalvik-cache/*.apk
 $RM -rf /data/dalvik-cache/*.tmp
 $RM -rf /data/dalvik-cache/*.log
