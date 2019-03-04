@@ -57,7 +57,7 @@ $RM -rf /data/system/usagestats/*.txt
 
 echo "-- Deleting misc files from /data" | tee -a $LOGFILE
 $RM -rf /data/mlog/*
-$RM -rf /data/cache/*.*
+#$RM -rf /data/cache/*.* (mabelisle) Fix for Google Backup 03-03-2019
 $RM -rf /sdcard/LOST.DIR
 $RM -rf /data/ota
 $RM -rf /data/ota_package
