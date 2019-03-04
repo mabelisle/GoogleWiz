@@ -284,8 +284,10 @@ Google Pay confirmed working (of course your bank/card has to support it). See h
 GoogleWiz, ROM for the Samsung Galaxy S8
 
 ## Contributors
-[https://forum.xda-developers.com/member.php?u=3463514]foobar66
-[https://forum.xda-developers.com/member.php?u=4191970]mabelisle
+[foobar66](https://forum.xda-developers.com/member.php?u=3463514)  
+[mabelisle](https://forum.xda-developers.com/member.php?u=4191970)
+
+
 ROM OS Version: 8.x Oreo
 
 ## Version Information
