@@ -14,7 +14,7 @@ fi
 
 # Remove temporary files left in folders
 #find . -name '*~' -exec rm -rf {} \;
-#find ~/googlewiz/androidfiles -name '*~' -exec rm -rf {} \;
+#find ~/Googlegiz/androidfiles -name '*~' -exec rm -rf {} \;
 
 # Backup the build.prop file
 cp system/build.prop system/build.prop.orig
@@ -422,7 +422,7 @@ main()
   remove system/media/audio/ringtones
   remove system/media/audio/notifications
   #remove system/media/audio/alarms #(mabelisle) Folder Missing 2019-02-23
-  tar xf ~/googlewiz/androidfiles/sounds/sounds.tar
+  tar xf ~/GoogleWiz/androidfiles/sounds/sounds.tar
   remove system/media/audio/ui/Media_preview_Over_the_horizon.ogg*
   remove system/media/audio/ui/Dock.ogg*
   remove system/media/audio/ui/Undock.ogg*
@@ -930,7 +930,8 @@ main()
 
   if [ -e ./mini ]; then
     echo "Installing Google base to system/app and system/priv-app"
-    tar xf ~/googlewiz/androidfiles/apps.tar
+    cp -r ~/GoogleWiz-Apps/apps/system ~/GoogleWiz
+    #tar xf ~/GoogleWiz/androidfiles/apps.tar #(mabelisle) Move apps to repo 2019-02-26
     #remove system/priv-app/MyFileManager #(mabelisle) File Missing 2019-02-23
     #remove system/priv-app/MyLauncherKey #(mabelisle) File Missing 2019-02-23
     #remove system/priv-app/MySystemInfo #(mabelisle) File Missing 2019-02-23
@@ -952,24 +953,24 @@ main()
   if [ ! "$1" == "onlyapk" ]; then
     echo "Creating init.d and scripts"
     mkdir -p system/etc/init.d/
-    cp ~/googlewiz/androidfiles/init.d/LS00* system/etc/init.d/
+    cp ~/GoogleWiz/androidfiles/init.d/LS00* system/etc/init.d/
     if [ -e ./mini ]; then
         rm system/etc/init.d/LS00dvfs
     fi
     echo "Creating services.d and scripts"
     mkdir -p system/etc/services.d/
-    cp ~/googlewiz/androidfiles/services.d/LS99* system/etc/services.d/
+    cp ~/GoogleWiz/androidfiles/services.d/LS99* system/etc/services.d/
     if [ -e ./mini ]; then
         rm system/etc/services.d/LS99humo
     fi
     echo "Creating system/csc"
     # remove system/csc/ #(mabelisle) Folder Missing 2019-02-23
     mkdir system/csc/
-    cp ~/googlewiz/androidfiles/feature/customer.xml system/csc/
+    cp ~/GoogleWiz/androidfiles/feature/customer.xml system/csc/
     echo "Setting system/csc/sales_code.dat to PRO"
     echo PRO > system/csc/sales_code.dat
     echo "Adding script to /etc/init"
-    cp ~/googlewiz/androidfiles/init/zzzfoobar66.rc system/etc/init/
+    cp ~/GoogleWiz/androidfiles/init/zzzfoobar66.rc system/etc/init/
   fi
 
 #============================================================================
@@ -984,56 +985,56 @@ main()
 
   echo "Copying permissions"
   if [ ! "$1" == "onlyapk" ]; then
-    cp ~/googlewiz/androidfiles/permissions/privapp-permissions-platform.xml system/etc/permissions/
-    cp ~/googlewiz/androidfiles/permissions/privapp-permissions-google.xml system/etc/permissions/
-    cp ~/googlewiz/androidfiles/gps/gps.conf system/etc/
+    cp ~/GoogleWiz/androidfiles/permissions/privapp-permissions-platform.xml system/etc/permissions/
+    cp ~/GoogleWiz/androidfiles/permissions/privapp-permissions-google.xml system/etc/permissions/
+    cp ~/GoogleWiz/androidfiles/gps/gps.conf system/etc/
   fi
 
 #============================================================================
 
   echo "Copying Google dialer files"
-  cp ~/googlewiz/androidfiles/dialer/com.google.android.dialer.support.jar system/framework/
-  cp ~/googlewiz/androidfiles/dialer/com.google.android.dialer.support.xml system/etc/permissions/
-  cp ~/googlewiz/androidfiles/dialer/dialer_experience.xml system/etc/sysconfig/
-  cp ~/googlewiz/androidfiles/pixel/pixel_experience_2017.xml system/etc/sysconfig/
-  cp ~/googlewiz/androidfiles/pixel/pixel_experience_2018.xml system/etc/sysconfig/
+  cp ~/GoogleWiz/androidfiles/dialer/com.google.android.dialer.support.jar system/framework/
+  cp ~/GoogleWiz/androidfiles/dialer/com.google.android.dialer.support.xml system/etc/permissions/
+  cp ~/GoogleWiz/androidfiles/dialer/dialer_experience.xml system/etc/sysconfig/
+  cp ~/GoogleWiz/androidfiles/pixel/pixel_experience_2017.xml system/etc/sysconfig/
+  cp ~/GoogleWiz/androidfiles/pixel/pixel_experience_2018.xml system/etc/sysconfig/
 
 #============================================================================
 
   echo "Copying executables"
-  cp ~/googlewiz/androidfiles/bin/* system/xbin
+  cp ~/GoogleWiz/androidfiles/bin/* system/xbin
 
 #============================================================================
 
   echo "Copying hosts file"
-  cp ~/googlewiz/androidfiles/hosts/hosts.short system/etc
-  cp ~/googlewiz/androidfiles/hosts/hosts.long system/etc
-  cp ~/googlewiz/androidfiles/hosts/hosts.medium system/etc
+  cp ~/GoogleWiz/androidfiles/hosts/hosts.short system/etc
+  cp ~/GoogleWiz/androidfiles/hosts/hosts.long system/etc
+  cp ~/GoogleWiz/androidfiles/hosts/hosts.medium system/etc
 
 #============================================================================
 
   echo "Copying libraries"
-  cp ~/googlewiz/androidfiles/lib/libblurdetection.so system/lib
+  cp ~/GoogleWiz/androidfiles/lib/libblurdetection.so system/lib
 
 #============================================================================
 
   # this tricks the device into being a Pixel but has impact on photos app
-  tar xf ~/googlewiz/androidfiles/pixel/PixelEtc.tar
-  cp ~/googlewiz/androidfiles/pixel/pixel_2018_exclusive.xml system/etc/sysconfig/
-  cp ~/googlewiz/androidfiles/pixel/google-hiddenapi-package-whitelist.xml system/etc/sysconfig/
-  cp ~/googlewiz/androidfiles/pixel/hiddenapi-package-whitelist.xml system/etc/sysconfig/
+  tar xf ~/GoogleWiz/androidfiles/pixel/PixelEtc.tar
+  cp ~/GoogleWiz/androidfiles/pixel/pixel_2018_exclusive.xml system/etc/sysconfig/
+  cp ~/GoogleWiz/androidfiles/pixel/google-hiddenapi-package-whitelist.xml system/etc/sysconfig/
+  cp ~/GoogleWiz/androidfiles/pixel/hiddenapi-package-whitelist.xml system/etc/sysconfig/
 
 #============================================================================
 
   if [ ! "$1" == "onlyapk" ]; then
-    cp ~/googlewiz/androidfiles/apns-conf.xml system/etc/
-    cp ~/googlewiz/androidfiles/feature/feature.xml system/csc/
-    cp ~/googlewiz/androidfiles/feature/camera-feature-v7.xml system/cameradata/
-    cp ~/googlewiz/androidfiles/feature/camera-feature-v8.xml system/cameradata/
-    cp ~/googlewiz/androidfiles/feature/floating_feature.xml system/etc/floating_feature.xml
-    cp ~/googlewiz/androidfiles/media/media_profiles.xml system/etc/
+    cp ~/GoogleWiz/androidfiles/apns-conf.xml system/etc/
+    cp ~/GoogleWiz/androidfiles/feature/feature.xml system/csc/
+    cp ~/GoogleWiz/androidfiles/feature/camera-feature-v7.xml system/cameradata/
+    cp ~/GoogleWiz/androidfiles/feature/camera-feature-v8.xml system/cameradata/
+    cp ~/GoogleWiz/androidfiles/feature/floating_feature.xml system/etc/floating_feature.xml
+    cp ~/GoogleWiz/androidfiles/media/media_profiles.xml system/etc/
     # overlays
-    tar xf ~/googlewiz/androidfiles/overlays/overlays.tar
+    tar xf ~/GoogleWiz/androidfiles/overlays/overlays.tar
     if [ -e ./mini ]; then
       # no round icons for GoogleWiz variants
       remove system/vendor/overlay/RoundIconsMaskOverlay.apk
@@ -1047,23 +1048,23 @@ main()
 #============================================================================
 
   echo "Installing boot animation"
-  cp ~/googlewiz/androidfiles/bootanimation/*.qmg system/media
+  cp ~/GoogleWiz/androidfiles/bootanimation/*.qmg system/media
 
   mkdir -p system/etc/bash
-  cp ~/googlewiz/androidfiles/bash/bashrc system/etc/bash/
-  cp ~/googlewiz/androidfiles/bash/bash_aliases system/etc/bash/
-  cp ~/googlewiz/androidfiles/bash/mkshrc system/etc
+  cp ~/GoogleWiz/androidfiles/bash/bashrc system/etc/bash/
+  cp ~/GoogleWiz/androidfiles/bash/bash_aliases system/etc/bash/
+  cp ~/GoogleWiz/androidfiles/bash/mkshrc system/etc
 
 #============================================================================
 
   echo "Installing android P fonts"
   if [ -e ./mini ]; then
-    tar xf ~/googlewiz/androidfiles/fonts/AndroidPFontsLarge.tar 2> /dev/null
+    tar xf ~/GoogleWiz/androidfiles/fonts/AndroidPFontsLarge.tar 2> /dev/null
   else
-    tar xf ~/googlewiz/androidfiles/fonts/AndroidPFonts.tar 2> /dev/null
+    tar xf ~/GoogleWiz/androidfiles/fonts/AndroidPFonts.tar 2> /dev/null
   fi
-  tar xf ~/googlewiz/androidfiles/fonts/AODfonts.tar 2> /dev/null
-  cp ~/googlewiz/androidfiles/fonts/fonts.xml system/etc/
+  tar xf ~/GoogleWiz/androidfiles/fonts/AODfonts.tar 2> /dev/null
+  cp ~/GoogleWiz/androidfiles/fonts/fonts.xml system/etc/
 
 #============================================================================
 
@@ -1088,7 +1089,7 @@ main()
       's/ro.build.selinux=1/ro.build.selinux=0/g'
       's/persist.sys.storage_preload=1/persist.sys.storage_preload=0/g'
       's/ro.config.tima=1/ro.config.tima=0/g'
-      's/ro.product.locale=en-GB/ro.product.locale=nl-BE/g'
+      's/ro.product.locale=en-GB/ro.product.locale=en_US/g'
       's/ro.config.dmverity=true/ro.config.dmverity=false/g'
       's/ro.config.knox=v30/ro.config.knox=v30/g'
       's/ro.config.timaversion=3.0/ro.config.timaversion=disabled/g'
@@ -1133,18 +1134,18 @@ main()
       cp /tmp/build.prop.tmp system/build.prop
     done
     echo "Patching build.prop (adding properties)"
-    cat /tmp/build.prop.tmp ~/googlewiz/androidfiles/extrabuild > system/build.prop
+    cat /tmp/build.prop.tmp ~/GoogleWiz/androidfiles/extrabuild > system/build.prop
   fi
   echo 'ro.csc.sales_code=PRO' >> system/build.prop
-  echo "ro.build.display.id=GoogleWiz Oreo by foobar66 (`date +%Y-%m-%d`)" >> system/build.prop
-  #echo "Copying build.prop to ~/googlewiz"
-  #cp system/build.prop ~/googlewiz
+  echo "ro.build.display.id=GoogleWiz Oreo built by mabelisle (`date +%Y-%m-%d`)" >> system/build.prop
+  #echo "Copying build.prop to ~/GoogleWiz"
+  #cp system/build.prop ~/GoogleWiz
 
 #============================================================================
 
   if [ ! "$1" == "onlyapk" ]; then
     echo "Adding aptx bluetooth streaming"
-    tar xf ~/googlewiz/androidfiles/aptx/aptx.tar -C system
+    tar xf ~/GoogleWiz/androidfiles/aptx/aptx.tar -C system
   fi
 
 #============================================================================
@@ -1176,11 +1177,15 @@ main()
     if [ ! -e ./noreplace ]
     then
       echo "Replacing Samsung APKs with newer versions"
-      for file in `tar tvf ~/googlewiz/androidfiles/sapps.tar  | awk '{print $6}' | sed 's#/# #g' | awk '{print $3'} | sort | uniq`; do
-        rm -rf system/app/$file
-        rm -rf system/priv-app/$file
-      done
-		tar xf ~/googlewiz/androidfiles/sapps.tar
+      find ../GoogleWiz-Apps/sapps/system/app/* system/app/* -maxdepth 0 -type d | awk -F/ '{D[$NF]++} END {for (d in D) if (D[d]>1) print "rm -rf system/app/" d}' | sh
+      find ../GoogleWiz-Apps/sapps/system/priv-app/* system/priv-app/* -maxdepth 0 -type d | awk -F/ '{D[$NF]++} END {for (d in D) if (D[d]>1) print "rm -rf system/priv-app/" d}' | sh
+
+      #for file in `tar tvf ~/GoogleWiz/androidfiles/sapps.tar  | awk '{print $6}' | sed 's#/# #g' | awk '{print $3'} | sort | uniq`; do
+      #  rm -rf system/app/$file
+      #  rm -rf system/priv-app/$file
+      #done
+    cp -r ~/GoogleWiz-Apps/sapps/system ~/GoogleWiz
+		#tar xf ~/GoogleWiz/androidfiles/sapps.tar
     fi
   fi
 
@@ -1234,7 +1239,7 @@ main()
 #============================================================================
 
   echo "Copying noxxx system files"
-  cp -r ~/googlewiz/androidfiles/noxsystem/* system
+  cp -r ~/GoogleWiz/androidfiles/noxsystem/* system
 
 #============================================================================
 

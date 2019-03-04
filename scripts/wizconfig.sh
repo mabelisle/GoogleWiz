@@ -4,327 +4,217 @@ BB=/sbin/busybox
 D2U=/sbin/dos2unix
 
 CF=/sdcard/googlewiz.config
+LOGFILE=/data/wizconfig.log
 
+# Defaults
 LAUNCHER=false
 KEYBOARD=false
 BLACKNAVBAR=false
 GOOGLECHROMECAST=false
-
 BIXNEW='key 703 HOME'
 
-LOGFILE=/data/wizconfig.log
+# Main execution
+main()
+{
+  $BB rm -rf $LOGFILE
+  $BB echo ">> wizconfig.sh script (start)" | $BB tee -a $LOGFILE
 
-$BB rm -rf $LOGFILE
-$BB echo ">> wizconfig.sh script (start)" | $BB tee -a $LOGFILE
-
-if [ -f "$CF" ]; then
+  if [ -f "$CF" ]; then
     $BB echo "-- $CF found, converting to UNIX format" | $BB tee -a $LOGFILE
     $D2U $CF
+    
     # parse the config file and delete what we don't need (assuming /system is still mounted)
     while IFS='' read -r line || [[ -n "$line" ]]; do
-        $BB echo "-- processing line: $line" | $BB tee -a $LOGFILE
-        if [ "$line" == "clock=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleClock" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleClock
-        fi
-        if [ "$line" == "calendar=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleCalendar" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleCalendar
-        fi
-        if [ "$line" == "filesgo=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleFilesGo" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleFilesGo
-        fi
-        if [ "$line" == "mixplorer=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleFilesGo" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyMiXplorer
-        fi
-        if [ "$line" == "search=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleClock" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleApp
-        fi
-        if [ "$line" == "assistant=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleAssistant" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleAssistant
-        fi
-        if [ "$line" == "print=0" ]; then
-            $BB echo "-- removing: print framework" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleCloudPrint
-            $BB rm -rf /system/app/SPrintSpooler
-            $BB rm -rf /system/app/BuiltInPrintService
-        fi
-        if [ "$line" == "calculator=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleCalculator" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleCalculator
-        fi
-        if [ "$line" == "mtp=0" ]; then
-            $BB echo "-- removing: MTP" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MtpApplication
-            $BB rm -rf /system/etc/init/mtpd.rc
-            $BB rm -rf /system/bin/mtpd
-        fi
-        if [ "$line" == "bluelightfilter=0" ]; then
-            $BB echo "-- removing: /system/priv-app/BlueLightFilter" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/BlueLightFilter
-        fi
-        if [ "$line" == "smartmanager=0" ]; then
-            $BB echo "-- removing: /system/priv-app/SmartManager_v5" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/SmartManager_v5
-        fi
-        if [ "$line" == "launcher=nova" ]; then
-            if [ "$LAUNCHER" == "false" ]; then
-                $BB echo "-- removing: pixel launcher" | $BB tee -a $LOGFILE
-                $BB rm -rf /system/priv-app/MyGooglePixelLauncher
-                $BB rm -rf /system/priv-app/MyPixelBridge
-                LAUNCHER=true
-            fi
-        fi
-        if [ "$line" == "launcher=pixel" ]; then
-            if [ "$LAUNCHER" == "false" ]; then
-                $BB echo "-- removing: nova launcher" | $BB tee -a $LOGFILE
-                $BB rm -rf /system/priv-app/MyLauncher
-                $BB rm -rf /system/priv-app/MyLauncherCompanion
-                $BB rm -rf /system/priv-app/MyGoogleIconPack
-                LAUNCHER=true
-            fi
-        fi
-        if [ "$line" == "keyboard=gboard" ]; then
-            if [ "$KEYBOARD" == "false" ]; then
-                $BB echo "-- removing: /system/priv-app/MySwiftkey" | $BB tee -a $LOGFILE
-                $BB rm -rf /system/app/MySwiftkey
-                KEYBOARD=true
-            fi
-        fi
-        if [ "$line" == "keyboard=swiftkey" ]; then
-            if [ "$KEYBOARD" == "false" ]; then
-                $BB echo "-- removing: /system/priv-app/MyGoogleGboard" | $BB tee -a $LOGFILE
-                $BB rm -rf /system/app/MyGoogleGboard
-                KEYBOARD=true
-            fi
-        fi
-        if [ "$line" == "googlenow=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleLauncherCompanion" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyLauncherCompanion
-        fi
-        if [ "$line" == "wallpapers=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleWallpapers" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleWallpapers
-        fi
-        if [ "$line" == "iconpack=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleIconPack" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleIconPack
-        fi
-        if [ "$line" == "adaway=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleAdaway" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyAdaway
-        fi
-        if [ "$line" == "news=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleNews" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleNews
-        fi
-        if [ "$line" == "tasks=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleTasks" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleTasks
-        fi
-        if [ "$line" == "blacknavbar=1" ]; then
-            $BB echo "-- adding: black navbar" | $BB tee -a $LOGFILE
-            BLACKNAVBAR=true
-        fi
-        if [ "$line" == "chromecast=1" ]; then
-            $BB echo "-- adding: /system/priv-app/MyGoogleChromecast" | $BB tee -a $LOGFILE
-            GOOGLECHROMECAST=true
-        fi
-        if [ "$line" == "markup=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleMarkup" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleMarkup/
-        fi
-        if [ "$line" == "lens=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleLens" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleLens/
-        fi
-        if [ "$line" == "camera=0" ]; then
-            $BB echo "-- removing: /system/priv-app/SamsungCamera7" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/SamsungCamera7/
-        fi
-        if [ "$line" == "photos=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGooglePhotos" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGooglePhotos/
-        fi
-        if [ "$line" == "icons=samsung" ]; then
-            $BB echo "-- removing: pixel icons" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/vendor/overlay/SettigsIcons.apk
-            $BB rm -rf /system/vendor/overlay/SystemuiStatusbarIcons.apk
-            $BB rm -rf /system/vendor/overlay/SystemuiTilesIcons.apk
-            $BB rm -rf /system/vendor/overlay/SystemuiNavbarAOSP.apk
-        fi
-        if [ "$line" == "mms=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MsgCommService" | $BB tee -a $LOGFILE
-            $BB echo "-- removing: /system/priv-app/MmsService" | $BB tee -a $LOGFILE
-            rm -rf system/priv-app/MsgCommService
-            rm -rf system/priv-app/MmsService
-        fi
-        if [ "$line" == "measure=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleARCore" | $BB tee -a $LOGFILE
-            $BB echo "-- removing: /system/priv-app/MyGoogleMeasure" | $BB tee -a $LOGFILE
-            rm -rf system/priv-app/MyGoogleARCore
-            rm -rf system/priv-app/MyGoogleMeasure
-        fi
-        if [ "$line" == "gmail=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleGmail/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleGmail/
-        fi
-        if [ "$line" == "keep=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleKeep/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleKeep/
-        fi
-        if [ "$line" == "drive=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleDrive/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleDrive/
-        fi
-        if [ "$line" == "maps=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleMaps/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleMaps/
-        fi
-        if [ "$line" == "chrome=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleChrome/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleChrome/
-        fi
-        if [ "$line" == "datally=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleDatally/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleDatally/
-        fi
-        if [ "$line" == "youtube=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleYoutube/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleYoutube
-        fi
-        if [ "$line" == "plus=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGooglePlus/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGooglePlus/
-        fi
-        if [ "$line" == "trips=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleTrips/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleTrips/
-        fi
-        if [ "$line" == "translate=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleTranslate/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleTranslate/
-        fi
-        if [ "$line" == "earth=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleEarth/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleEarth/
-        fi
-        if [ "$line" == "fit=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleFit/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleFit/
-        fi
-        if [ "$line" == "podcasts=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGooglePodcasts/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGooglePodcasts/
-        fi
-        if [ "$line" == "music=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleMusic/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleMusic/
-        fi
-        if [ "$line" == "trustedcontacts=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleTrustedContacts/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleTrustedContacts/
-        fi
-        if [ "$line" == "auto=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleAuto/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleAuto/
-        fi
-        if [ "$line" == "snapseed=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleSnapseed/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleSnapseed/
-        fi
-        if [ "$line" == "photoscanner=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGooglePhotoscanner/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGooglePhotoscanner/
-        fi
-        if [ "$line" == "docs=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleDocs/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleDocs/
-        fi
-        if [ "$line" == "slides=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleSlides/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleSlides/
-        fi
-        if [ "$line" == "sheets=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleSheets/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleSheets/
-        fi
-        if [ "$line" == "streetview=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleStreetview/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleStreetview/
-        fi
-        if [ "$line" == "pay=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGooglePay/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGooglePay/
-        fi
-        if [ "$line" == "mymaps=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleMyMaps/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleMyMaps/
-        fi
-        if [ "$line" == "musicfx=0" ]; then
-            $BB echo "-- removing: /system/priv-app/MyGoogleMusicFX/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/MyGoogleMusicFX/
-        fi
-        if [ "$line" == "googlebackup=0" ]; then
-            $BB echo "-- removing: /system/priv-app/GoogleBackupTransport/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/GoogleBackupTransport/
-            $BB echo "-- removing: /system/priv-app/BackupRestoreConfirmation/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/BackupRestoreConfirmation/
-            $BB echo "-- removing: /system/priv-app/CallLogBackup/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/CallLogBackup/
-            $BB echo "-- removing: /system/priv-app/SharedStorageBackup/" | $BB tee -a $LOGFILE
-            $BB rm -rf /system/priv-app/SharedStorageBackup/
-        fi
+      $BB echo "-- processing line: $line" | $BB tee -a $LOGFILE
+      
+      case $line in
+      
+        # Clock https://play.google.com/store/apps/details?id=com.google.android.deskclock&hl=en
+        clock=0)
+          remove /system/priv-app/googlewiz.com.google.android.deskclock;;
+            
+        # Google Calendar https://play.google.com/store/apps/details?id=com.google.android.calendar
+        calendar=0)
+          remove /system/priv-app/googlewiz.com.google.android.calendar;;
 
-        # bixby configuration
-        if [ "$line" == "bixby=HOME" ]; then
-            BIXNEW='key 703 HOME'
-        fi
-        if [ "$line" == "bixby=BACK" ]; then
-            BIXNEW='key 703 BACK'
-        fi
-        if [ "$line" == "bixby=CAMERA" ]; then
-            BIXNEW='key 703 CAMERA'
-        fi
-        if [ "$line" == "bixby=CONTACTS" ]; then
-            BIXNEW='key 703 CONTACTS'
-        fi
-        if [ "$line" == "bixby=MESSAGE" ]; then
-            BIXNEW='key 703 MESSAGE'
-        fi
-        if [ "$line" == "bixby=CALL" ]; then
-            BIXNEW='key 703 CALL'
-        fi
-        if [ "$line" == "bixby=SEARCH" ]; then
-            BIXNEW='key 703 SEARCH'
-        fi
-        if [ "$line" == "bixby=CALENDAR" ]; then
-            BIXNEW='key 703 CALENDAR'
-        fi
-        if [ "$line" == "bixby=APP_SWITCH" ]; then
-            BIXNEW='key 703 APP_SWITCH'
-        fi
-        if [ "$line" == "bixby=SCREENSHOT" ]; then
-            BIXNEW='key 703 SYSRQ'
-        fi
-        if [ "$line" == "bixby=ASSISTANT" ]; then
-            BIXNEW='key 703 VOICE_ASSIST'
-        fi
-        if [ "$line" == "bixby=NONE" ]; then
-            BIXNEW='NONE'
-        fi
+        # MiXplorer https://forum.xda-developers.com/showthread.php?t=1523691
+        mixplorer=0)
+          remove /system/priv-app/googlewiz.com.mixplorer.silver;;
+
+        # Google App https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox
+        search=0)
+          remove /system/priv-app/googlewiz.com.google.android.googlequicksearchbox;;
+
+        # Google Assistant https://play.google.com/store/apps/details?id=com.google.android.apps.googleassistant
+        assistant=0)
+          remove /system/priv-app/googlewiz.com.google.android.apps.googleassistant;;
+
+        # Cloud Print https://play.google.com/store/apps/details?id=com.google.android.apps.cloudprint
+        print=0)
+          remove /system/priv-app/googlewiz.com.google.android.apps.cloudprint
+          remove /system/app/SPrintSpooler
+          remove /system/app/BuiltInPrintService;;
+
+        # Calculator https://play.google.com/store/apps/details?id=com.google.android.calculator
+        calculator=0)
+          remove /system/priv-app/googlewiz.com.google.android.calculator;;
+
+        # MTP "Enable transfer between PC and mobile phone"
+        mtp=0)
+          remove /system/priv-app/MtpApplication
+          remove /system/etc/init/mtpd.rc
+          remove /system/bin/mtpd;;
+
+        # Samsung Blue Light Filter
+        bluelightfilter=0)
+          remove /system/priv-app/BlueLightFilter;;
+        
+        # Samsung Smart Manager
+        smartmanager=0)
+          remove /system/priv-app/SmartManager_v5;;
+
+        # Nova Launcher https://play.google.com/store/apps/details?id=com.teslacoilsw.launcher
+        launcher=nova)
+          remove /system/priv-app/googleziz.amirz.rootless.nexuslauncher
+          remove /system/priv-app/googlewiz.com.google.android.apps.nexuslauncher
+          LAUNCHER=true;;
+
+        # Rootless Pixel Launcher https://github.com/amirzaidi/Launcher3
+        launcher=pixel)
+          remove /system/priv-app/googlewiz.com.teslacoilsw.launcher
+          remove /system/priv-app/googlewiz.com.teslacoilsw.launcherclientproxy
+          LAUNCHER=true;;
+
+        # Gboard - the Google Keyboard https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin
+        keyboard=gboard)
+          remove /system/app/googlewiz.com.touchtype.swiftkey
+          KEYBOARD=true;;
+
+        # SwiftKey Keyboard https://play.google.com/store/apps/details?id=com.touchtype.swiftkey
+        keyboard=swiftkey)
+          remove /system/app/com.google.android.inputmethod.latin
+          KEYBOARD=true;;
+
+        # AdAway https://forum.xda-developers.com/showthread.php?t=2190753
+        adaway=0)
+          remove /system/priv-app/googlewiz.org.adaway;;
+
+        # Google News https://play.google.com/store/apps/details?id=com.google.android.apps.magazines
+        news=0)
+          remove /system/priv-app/googlewiz.com.google.android.apps.magazines;;
+
+        # Black Navigation Bar
+        blacknavbar=1)
+          BLACKNAVBAR=true;;
+
+        # Google Home https://play.google.com/store/apps/details?id=com.google.android.apps.chromecast.app
+        chromecast=1)
+          GOOGLECHROMECAST=true;;
+
+        # Samsung Camera
+        camera=0)
+          remove system/priv-app/SamsungCamera7;;
+
+        # Google Photos https://play.google.com/store/apps/details?id=com.google.android.apps.photos
+        photos=0)
+          remove system/priv-app/googlewiz.com.google.android.apps.photos;;
+
+        # Smasung Icons (Removing pixel icons)
+        icons=samsung)
+          remove /system/vendor/overlay/SettigsIcons.apk
+          remove /system/vendor/overlay/SystemuiStatusbarIcons.apk
+          remove /system/vendor/overlay/SystemuiTilesIcons.apk
+          remove /system/vendor/overlay/SystemuiNavbarAOSP.apk;;
+
+        # MMS Services
+        mms=0)
+          remove system/priv-app/MsgCommService
+          remove system/priv-app/MmsService;;
+
+        # Gmail https://play.google.com/store/apps/details?id=com.google.android.gm
+        gmail=0)
+          remove /system/priv-app/MyGoogleGmail;;
+
+        # Google Drive https://play.google.com/store/apps/details?id=com.google.android.apps.docs
+        drive=0)
+          remove /system/priv-app/MyGoogleDrive;;
+
+        # Maps - Navigate & Explore https://play.google.com/store/apps/details?id=com.google.android.apps.maps
+        maps=0)
+          remove /system/priv-app/googlewiz.com.google.android.apps.maps;;
+
+        # Google Chrome: Fast & Secure https://play.google.com/store/apps/details?id=com.android.chrome
+        chrome=0)
+          remove /system/priv-app/googlewiz.com.android.chrome;;
+        chrome=1)
+          remove /system/app/googlewiz.com.google.android.webview;;
+          
+        # Youtube https://play.google.com/store/apps/details?id=com.google.android.youtube
+        youtube=0)
+          remove /system/priv-app/googlewiz.com.google.android.youtube;;
+
+        # Google Play Music https://play.google.com/store/apps/details?id=com.google.android.music
+        music=0)
+          remove /system/priv-app/googlewiz.com.google.android.music;;
+
+        # Contacts https://play.google.com/store/apps/details?id=com.google.android.contacts
+        contacts=0)
+          remove /system/priv-app/googlewiz.com.google.android.contacts;;
+        
+        # Android Auto https://play.google.com/store/apps/details?id=com.google.android.projection.gearhead
+        auto=0)
+          remove googlewiz.com.google.android.projection.gearhead;;
+
+        # Google Pay https://play.google.com/store/apps/details?id=com.google.android.apps.walletnfcrel
+        pay=0)
+          remove /system/priv-app/googlewiz.com.google.android.apps.walletnfcrel;;
+
+        # Google Play Games https://play.google.com/store/apps/details?id=com.google.android.play.games
+        games=0)
+          remove /system/priv-app/googlewiz.com.google.android.play.games;;
+
+        # Google Backup
+        googlebackup=0)
+          remove /system/priv-app/GoogleBackupTransport
+          remove /system/priv-app/BackupRestoreConfirmation
+          remove /system/priv-app/CallLogBackup
+          remove /system/priv-app/SharedStorageBackup;;
+
+        # Bixby configuration
+        bixby=HOME)
+          BIXNEW='key 703 HOME';;
+        bixby=BACK)  
+          BIXNEW='key 703 BACK';;
+        bixby=CAMERA)
+          BIXNEW='key 703 CAMERA';;
+        bixby=CONTACTS)
+          BIXNEW='key 703 CONTACTS';;
+        bixby=MESSAGE)
+          BIXNEW='key 703 MESSAGE';;
+        bixby=CALL)
+          BIXNEW='key 703 CALL';;
+        bixby=SEARCH)
+          BIXNEW='key 703 SEARCH';;
+        bixby=CALENDAR)
+          BIXNEW='key 703 CALENDAR';;
+        bixby=APP_SWITCH)
+          BIXNEW='key 703 APP_SWITCH';;
+        bixby=SCREENSHOT)
+          BIXNEW='key 703 SYSRQ';;
+        bixby=ASSISTANT)
+          BIXNEW='key 703 VOICE_ASSIST';;
+        bixby=NONE)
+          BIXNEW='NONE';;
+      esac
     done < "$CF"
-else
+  else
     $BB echo "-- $CF NOT found, creating dummy" | $BB tee -a $LOGFILE
     # config file is not there, create it
     $BB touch $CF
+    
     $BB echo 'clock=1' >> $CF
     $BB echo 'calendar=1' >> $CF
-    $BB echo 'filesgo=1' >> $CF
+    $BB echo 'mixplorer=1' >> $CF  
     $BB echo 'search=1' >> $CF
     $BB echo 'assistant=1' >> $CF
     $BB echo 'print=1' >> $CF
@@ -332,94 +222,91 @@ else
     $BB echo 'mtp=1' >> $CF
     $BB echo 'bluelightfilter=1' >> $CF
     $BB echo 'smartmanager=1' >> $CF
-    $BB echo 'launcher=nova' >> $CF
-    $BB echo 'keyboard=swiftkey' >> $CF
-    $BB echo 'googlenow=1' >> $CF
-    $BB echo 'wallpapers=1' >> $CF
-    $BB echo 'iconpack=1' >> $CF
+    $BB echo 'launcher=pixel' >> $CF
+    $BB echo 'keyboard=gboard' >> $CF
     $BB echo 'adaway=1' >> $CF
     $BB echo 'news=1' >> $CF
     $BB echo 'blacknavbar=0' >> $CF
-    $BB echo 'tasks=1' >> $CF
     $BB echo 'chromecast=1' >> $CF
-    $BB echo 'markup=1' >> $CF
-    $BB echo 'lens=1' >> $CF
     $BB echo 'bixby=HOME' >> $CF
     $BB echo 'camera=1' >> $CF
     $BB echo 'photos=1' >> $CF
+    $BB echo 'icons=pixel' >> $CF
     $BB echo 'mms=1' >> $CF
-    $BB echo 'measure=1' >> $CF
     $BB echo 'gmail=1' >> $CF
-    $BB echo 'keep=1' >> $CF
     $BB echo 'drive=1' >> $CF
     $BB echo 'maps=1' >> $CF
     $BB echo 'chrome=1' >> $CF
-    $BB echo 'datally=1' >> $CF
     $BB echo 'youtube=1' >> $CF
-    $BB echo 'plus=1' >> $CF
-    $BB echo 'trips=1' >> $CF
-    $BB echo 'translate=1' >> $CF
-    $BB echo 'earth=1' >> $CF
-    $BB echo 'fit=1' >> $CF
-    $BB echo 'podcasts=1' >> $CF
     $BB echo 'music=1' >> $CF
-    $BB echo 'trustedcontacts=1' >> $CF
+    $BB echo 'contacts=1' >> $CF
     $BB echo 'auto=1' >> $CF
-    $BB echo 'snapseed=1' >> $CF
-    $BB echo 'photoscanner=1' >> $CF
-    $BB echo 'docs=1' >> $CF
-    $BB echo 'slides=1' >> $CF
-    $BB echo 'sheets=1' >> $CF
-    $BB echo 'streetview=1' >> $CF
-    $BB echo 'mymaps=1' >> $CF
-    $BB echo 'bixby=HOME' >> $CF
-    $BB echo 'musicfx=1' >> $CF
+    $BB echo 'pay=1' >> $CF
+    $BB echo 'games=1' >> $CF
     $BB echo 'googlebackup=1' >> $CF
 
     $BB echo "-- $CF dummy created" | $BB tee -a $LOGFILE
-fi
+  fi
 
-if [ "$LAUNCHER" == "false" ]; then
-    # there was no launcher line in the config file; keep Nova
-    $BB echo "-- no launcher line: removing /system/priv-app/MyGooglePixelLauncher" | $BB tee -a $LOGFILE
-    $BB rm -rf /system/priv-app/MyGooglePixelLauncher
-    $BB rm -rf /system/priv-app/MyPixelBridge
-fi
-if [ "$KEYBOARD" == "false" ]; then
+  if [ "$LAUNCHER" == "false" ]; then
+    # there was no launcher line in the config file; keep Pixel Launcher
+    remove /system/priv-app/googlewiz.com.teslacoilsw.launcher
+    remove /system/priv-app/googlewiz.com.teslacoilsw.launcherclientproxy
+  fi
+  if [ "$KEYBOARD" == "false" ]; then
     # there was no keyboard line in the config file; keep Swiftkey
-    $BB echo "-- no keyboard line: removing /system/priv-app/MyGoogleGboard" | $BB tee -a $LOGFILE
-    $BB rm -rf /system/app/MyGoogleGboard
-fi
-if [ "$BLACKNAVBAR" == "false" ]; then
-    # by default we remove the black nav bar, only if it was true in the config we keep it
-    $BB echo "-- /system/priv-app/overlay.systemui.navbar.black/" | $BB tee -a $LOGFILE
-    $BB rm -rf /system/priv-app/overlay.systemui.navbar.black/
-fi
-if [ "$GOOGLECHROMECAST" == "false" ]; then
+    remove /system/priv-app/googlewiz.com.teslacoilsw.launcher
+    remove /system/priv-app/googlewiz.com.teslacoilsw.launcherclientproxy
+  fi
+  if [ "$BLACKNAVBAR" == "false" ]; then
+    remove /system/vendor/overlay/SystemuiNavbarBlack.apk
+  fi
+  if [ "$GOOGLECHROMECAST" == "false" ]; then
     # by default we remove, only if it was true in the config we keep it
-    $BB echo "-- /system/priv-app/MyGoogleChromecast" | $BB tee -a $LOGFILE
-    $BB rm -rf /system/priv-app/MyGoogleChromecast
-fi
-
-if [ ! "$BIXNEW" == "NONE" ]; then
+    remove /system/priv-app/googlewiz.com.google.android.apps.chromecast
+  fi
+  if [ ! "$BIXNEW" == "NONE" ]; then
     $BB echo "-- configuring bixby key: $BIXNEW" | $BB tee -a $LOGFILE
     # bixby key configuration
     $BB cat /system/usr/keylayout/Generic.kl | sed 's/key 703   WINK/#key 703   WINK/g' > /system/usr/keylayout/Generic.kl.orig
     $BB echo $BIXNEW > /tmp/keytemp
     $BB cat /system/usr/keylayout/Generic.kl.orig /tmp/keytemp > /system/usr/keylayout/Generic.kl
-else
+  else
     $BB echo "-- leaving bixby key unconfigured" | $BB tee -a $LOGFILE
-fi
+  fi
 
-$BB sync
-$BB sync
+  $BB sync
+  $BB sync
 
-$BB echo "\<\< wizconfig.sh script (done)" | $BB tee -a $LOGFILE
+  $BB echo "<< wizconfig.sh script (done)" | $BB tee -a $LOGFILE
 
-$BB sync
-$BB sync
+  $BB sync
+  $BB sync
 
-$BB cp /data/wizconfig.log /sdcard/
+  $BB cp /data/wizconfig.log /sdcard/
 
-$BB sync
-$BB sync
+  $BB sync
+  $BB sync
+}
+
+#######################################################
+# remove() Deleting directories & files with validation
+# Globals:
+#   None
+# Arguments:
+#   (String) File or directory name
+# Returns:
+#   None
+#######################################################
+remove()
+{
+  if [ -e $1 ]; then
+    $BB echo "-- removing: " $1 | $BB tee -a $LOGFILE
+    $BB rm -rf $1
+  else
+    $BB echo "-- ERROR Removing: " $1 | $BB tee -a $LOGFILE;
+  fi
+}
+
+# Call main function
+main "$@"; exit
