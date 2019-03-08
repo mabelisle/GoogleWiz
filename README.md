@@ -29,49 +29,28 @@ The ROM contains (only) the following Samsung applications: Settings (you can't 
     - PDF viewer from Google
     - Google optional features & apps (can be configured via googlewiz.config file; see below)
         - gmail (https://play.google.com/store/apps/details?id=com.google.android.gm)
-        - keep (https://play.google.com/store/apps/details?id=com.google.android.keep)
         - drive (https://play.google.com/store/apps/details?id=com.google.android.apps.docs)
         - maps (https://play.google.com/store/apps/details?id=com.google.android.apps.maps)
         - chrome (https://play.google.com/store/apps/details?id=com.android.chrome)
         - clock (with Spotify integration) (https://play.google.com/store/apps/details?id=com.google.android.deskclock)
         - calendar (https://play.google.com/store/apps/details?id=com.google.android.calendar)
         - calculator (https://play.google.com/store/apps/details?id=com.google.android.calculator)
-        - files go (https://play.google.com/store/apps/details?id=com.google.android.apps.nbu.files)
         - search app integrated with Nova search bar (https://www.google.com/search/about/)
         - assistant (https://www.apkmirror.com/apk/google-inc/google-assistant/) (only works if language = English)
-        - tasks (https://play.google.com/store/apps/details?id=com.google.android.apps.tasks)
-        - datally (https://datally.google.com/)
         - translate (https://play.google.com/store/apps/details?id=com.google.android.apps.translate)
-        - earth (https://play.google.com/store/apps/details?id=com.google.earth)
-        - trips (https://play.google.com/store/apps/details?id=com.google.android.apps.travel.onthego)
-        - fit (https://play.google.com/store/apps/details?id=com.google.android.apps.fitness)
-        - podcasts (https://play.google.com/store/apps/details?id=com.google.android.apps.podcasts)
         - cloud Printing (and local printing) (https://www.google.com/cloudprint/)
         - now cards integrated with Nova launcher see (https://forum.xda-developers.com/showpost.php?p=75591011&postcount=4)
         - lens photo analysis in photos app (only when language = English; read hints and tips section for other languages)
-        - lens app (https://www.apkmirror.com/apk/google-inc/google-lens/)
         - at a Glance widget (part of Google search app)
         - news (https://play.google.com/store/apps/details?id=com.google.android.apps.magazines)
         - Google Home (aka chromecast) (https://play.google.com/store/apps/details?id=com.google.android.apps.chromecast.app)
         - youtube (https://play.google.com/store/apps/details?id=com.google.android.youtube)
-        - plus (https://play.google.com/store/apps/details?id=com.google.android.apps.plus)
         - pay (https://play.google.com/store/apps/details?id=com.google.android.apps.walletnfcrel)
         - pixel icon pack for Nova launcher
         - pixel wallpapers (https://forum.xda-developers.com/showpost.php?p=77020268&postcount=1989)
-        - markup (https://9to5google.com/2018/03/07/android-p-dp1-markup-screenshot-editor/)
-        - measure (https://play.google.com/store/apps/details?id=com.google.tango.measure)
         - weather (just type "weather" in the google search app; it will offer you to get an icon on the desktop)
         - music (https://play.google.com/store/apps/details?id=com.google.android.music)
-        - trusted contacts (https://play.google.com/store/apps/details?id=com.google.android.apps.emergencyassist&hl=en)
         - android auto (Google's car mode) (https://play.google.com/store/apps/details?id=com.google.android.projection.gearhead)
-        - snapseed photo editor (https://play.google.com/store/apps/details?id=com.niksoftware.snapseed)
-        - photoscanner (https://play.google.com/store/apps/details?id=com.google.android.apps.photos.scanner)
-        - docs (https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs)
-        - slides (https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.slides)
-        - spreadsheets (https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.sheets)
-        - streetview (https://play.google.com/store/apps/details?id=com.google.android.street)
-        - my maps (https://play.google.com/store/apps/details?id=com.google.android.apps.m4b)
-        - musicfx (equalizer) (accessible via Settings > Sound > Sound quality and effects)
         - google backup
 - No weird Samsung background services
 - No need for a Samsung account; only a Google account
@@ -194,62 +173,40 @@ Screenshots in attach. Black screenshots taken from my own fully installed phone
 You can remove apps from the ROM and do some customizations. Create a simple text file with the content below. The file must be called "googlewiz.config". You should push it via adb onto /sdcard BEFORE installation. Then install the ROM via TWRP. The installer will read this file and remove the google apps which have "=0". There should be no spaces, i.e. "clock=1" instead of "clock = 1". I think you get the idea. It's not rocket science. If the file is not on /sdcard, everything remains in the ROM (with Nova as launcher and Swiftkey as keyboard). This config mechanis is very simple, avoids aroma, and still allows a bit of configuration. So as an absolute minimum (assuming you remove all above) you will have in your app drawer: Messaging, Camera, Contacts, Photos, Settings, Magisk, Nova Google Companion, Nova settings, Play Store, Swiftkey, Phone. (Nova Google companion icon will go away once clicked and OK).
 Code:
 ```
-clock=1 
-calendar=0
-filesgo=1
-search=0
+clock=1
+calendar=1
+mixplorer=1
+search=1
 assistant=1
-print=0
+print=1
 calculator=1
-mtp=0
-bluelightfilter=0
+mtp=1
+bluelightfilter=1
 smartmanager=1
-googlenow=0
-launcher=nova
-keyboard=swiftkey
-wallpapers=0
-iconpack=0
-adaway=0
+launcher=pixel
+keyboard=gboard
+adaway=1
 news=1
-tasks=0
-blacknavbar=1
+blacknavbar=0
 chromecast=1
-markup=0
-immersive=full
-lens=1
-icons=samsung
+bixby=HOME
 camera=1
 photos=1
-mms=0
-measure=1
-gmail=0
-keep=1
-drive=0
-maps=0
-datally=0
+icons=pixel
+mms=1
+gmail=1
+drive=1
+maps=1
 chrome=1
-youtube=0
-plus=1
-trips=1
-translate=1
-earth=1
-fit=0
-podcasts=0
-music=0
-trustedcontacts=1
-auto=0
-snapseed=1
-photoscanner=0
-docs=1
-slides=0
-sheets=1
-streetview=0
-mymaps=1
-musicfx=0
+youtube=1
+music=1
+contacts=1
+auto=1
+pay=1
+games=1
 googlebackup=1
-mixplorer=0
 ```
-clock = Google clock; calendar = Google calendar; filesgo = Google files Go; search = Google app; assistant = Google Assistant; print = Google cloudprinter and printing framework; calculator = Google calculator; mtp = MTP connectivity to PC; bluelightfilter = Blue Light Filter; smartmanager = Device Maintenance (in Settings); googlenow = Nova companion app for Google now cards; wallpapers = Google wallpaper app; iconpack = Google pixel icon pack; adaway = Adaway; news = Google News; tasks = Google Tasks; blacknavbar = Black Nav Bar (not installed by default; set to 1 if you want it); chromecast = Google home (not installed by default; set to 1 if you want it); markup = Google markup extension to Google photos; lens = Google lens app; camera = Samsung camera; photos = Google photos; mms = MMS; measure = Google measure; gmail = Google gmail; drive = Google drive; keep = Google keep; maps = Google maps; chrome = Google chrome browser; youtube = Google youtube; plus = Google+; earth = Google earth; translate = Google translate; trips = Google trips; fit = Google fit; podcasts = Google podcasts; music = Google music; trustedcontacts = Google trusted contacts; auto = Android car mode; snapseed = Google photo editor; photoscanner = Google photo scanner; docs/slides/sheets = Google office; streetview = Google street view; mymaps = Google my maps; musicfx = Google equalizer; googlebackup = Google backup; mixplorer = Mix Explorer
+clock = Google clock; calendar = Google calendar; mixplorer = Mix Explorer; search = Google app; assistant = Google Assistant; print = Google cloudprinter and printing framework; calculator = Google calculator; mtp = MTP connectivity to PC; bluelightfilter = Blue Light Filter; smartmanager = Device Maintenance (in Settings); adaway = Adaway; news = Google News; tasks = Google Tasks; blacknavbar = Black Nav Bar (not installed by default; set to 1 if you want it); chromecast = Google home (not installed by default; set to 1 if you want it); camera = Samsung camera; photos = Google photos; mms = MMS; gmail = Google gmail; drive = Google drive; maps = Google maps; chrome = Google chrome browser; youtube = Google youtube; plus = Google+; earth = Google earth; translate = Google translate; trips = Google trips; fit = Google fit; podcasts = Google podcasts; music = Google music; contacts = Google contacts; auto = Android car mode; pay = Google Pay; games = Google Play Games; googlebackup = Google backup
 
 For Nova launcher (default); put "launcher=nova" in the config file. For Google Pixel launcher, put "launcher=pixel" in the config file.
 For Swiftkey keyboard (default); put "keyboard=swiftkey" in the config file. For Google Gboard, put "keyboard=gboard" in the config file.
@@ -327,8 +284,10 @@ Google Pay confirmed working (of course your bank/card has to support it). See h
 GoogleWiz, ROM for the Samsung Galaxy S8
 
 ## Contributors
-[https://forum.xda-developers.com/member.php?u=3463514]foobar66
-[https://forum.xda-developers.com/member.php?u=4191970]mabelisle
+[foobar66](https://forum.xda-developers.com/member.php?u=3463514)  
+[mabelisle](https://forum.xda-developers.com/member.php?u=4191970)
+
+
 ROM OS Version: 8.x Oreo
 
 ## Version Information
