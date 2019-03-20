@@ -1,0 +1,61 @@
+#!/system/bin/sh
+
+LOGFILE=$1
+
+sysset () {
+    if [ -e "$2" ]; then
+        echo "-- echo $1 > $2" | tee -a $LOGFILE
+        echo "$1" > "$2"
+    else
+        echo "-- $2 does not exist" | tee -a $LOGFILE
+    fi
+}
+
+echo "-- applying LMK tweaks" | tee -a $LOGFILE
+sysset 64 /sys/module/lowmemorykiller/parameters/cost
+sysset 0 /sys/module/lowmemorykiller/parameters/debug_level
+
+echo "-- applying VM tweaks" | tee -a $LOGFILE
+sysset 0 /proc/sys/vm/page-cluster
+sysset 0 /proc/sys/vm/laptop_mode
+
+echo "-- tuning CFS slice" | tee -a $LOGFILE
+sysset 4000 /proc/sys/kernel/sched_cfs_bandwidth_slice_us
+
+echo "-- applying GPU governor tweaks" | tee -a $LOGFILE
+sysset Booster /sys/kernel/gpu/gpu_governor
+
+echo "-- disabling debug of kernel modules" | tee -a $LOGFILE
+sysset N /sys/module/ip6_tunnel/parameters/log_ecn_error
+sysset N /sys/module/sit/parameters/log_ecn_error
+sysset 0 /sys/module/hrmsensor/parameters/hrm_debug
+sysset 0 /sys/module/hid/parameters/debug
+sysset 0 /sys/module/acpi/parameters/aml_debug_output
+sysset N /sys/module/v4l2_mem2mem/parameters/debug
+sysset 0 /sys/module/ramoops/parameters/dump_oops
+sysset 0 /sys/module/alarm_dev/parameters/debug_mask
+sysset 3 /sys/module/decon/parameters/decon_log_level
+sysset N /sys/module/sit/parameters/log_ecn_error
+sysset Y /sys/module/spurious/parameters/noirqdebug
+sysset 0 /sys/module/binder/parameters/debug_mask
+sysset 0 /sys/module/xt_qtaguid/parameters/debug_mask
+sysset 0 /sys/module/g2d1shot_drv/parameters/g2d_debug
+sysset 0 /sys/module/state_notifier/parameters/debug_mask
+sysset N /sys/module/kernel/parameters/initcall_debug
+sysset N /sys/module/sec_debug/parameters/enable
+
+echo "-- disable misc debug in kernel" | tee -a $LOGFILE
+sysset 0 /sys/devices/virtual/sensors/hrm_sensor/hrm_debug
+sysset 0 /sys/class/input_booster/debug_level
+sysset N /sys/kernel/debug/debug_enabled
+
+if [ -e /sys/kernel/gpu/gpu_min_clock ]; then
+    echo "-- boosting gpu frequency" | tee -a $LOGFILE
+    cat /sys/kernel/gpu/gpu_freq_table | awk '{print $2}' > /sys/kernel/gpu/gpu_min_clock
+else
+    echo "-- /sys/kernel/gpu/gpu_min_clock does not exist" | tee -a $LOGFILE
+fi
+
+echo "-- read and write wakeup thresholds" | tee -a $LOGFILE
+sysset 1024 /proc/sys/kernel/random/read_wakeup_threshold
+sysset 2048 /proc/sys/kernel/random/write_wakeup_threshold

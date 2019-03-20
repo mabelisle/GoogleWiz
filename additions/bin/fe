@@ -1,0 +1,1 @@
+find . -type d -exec bash -c 'shopt -s nullglob; shopt -s dotglob; a=("$1"/*); [[ ${a[@]} ]] || printf "%s\0" "$1"' sh {} \;

@@ -1,0 +1,24 @@
+#!/system/bin/sh
+
+LOGFILE=$1
+
+BB=/system/xbin/busybox
+TB=/system/bin/toybox
+CF=/sdcard/googlewiz.config
+
+# swap is ON by default, set swappiness to 60 (Noxxxious recommendation)
+$BB timeout -t 3 -s KILL $BB sysctl -e -w vm.swappiness=60
+
+if [ -f "$CF" ]; then
+    if [ "$(grep 'swap=0' $CF)" != "" ]; then
+        # do a grep, assume that we don't have to convert to UNIX file format first
+        echo "-- disabling swap: $TB stop swapon" | tee -a $LOGFILE
+        $TB stop swapon
+        echo "-- disabling swap: /sbin/sswap -e" | tee -a $LOGFILE
+        /sbin/sswap -e
+        $BB timeout -t 3 -s KILL $BB sysctl -e -w vm.swappiness=0
+        echo "-- swap disabled with vm.swappiness=0" | tee -a $LOGFILE
+    else
+        echo "-- leaving swap on with vm.swappiness=60" | tee -a $LOGFILE
+    fi
+fi

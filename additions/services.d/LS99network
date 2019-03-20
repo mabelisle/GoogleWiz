@@ -1,0 +1,30 @@
+#!/system/bin/sh
+
+LOGFILE=$1
+PROP=/system/bin/getprop
+BB=/system/xbin/busybox
+HDPARM=/system/xbin/hdparm
+
+sysset () {
+    if [ -e "$2" ]; then
+        echo "-- echo $1 > $2" | tee -a $LOGFILE
+        echo "$1" > "$2"
+    else
+        echo "-- $2 does not exist" | tee -a $LOGFILE
+    fi
+}
+
+VALUE=100
+
+sysset "$VALUE" /sys/class/net/wlan0/tx_queue_len
+sysset "$VALUE" /sys/class/net/rmnet0/tx_queue_len
+sysset "$VALUE" /sys/class/net/rmnet1/tx_queue_len
+sysset "$VALUE" /sys/class/net/rmnet2/tx_queue_len
+sysset "$VALUE" /sys/class/net/rmnet3/tx_queue_len
+sysset "$VALUE" /sys/class/net/rmnet4/tx_queue_len
+sysset "$VALUE" /sys/class/net/rmnet5/tx_queue_len
+sysset "$VALUE" /sys/class/net/rmnet6/tx_queue_len
+sysset "$VALUE" /sys/class/net/rmnet7/tx_queue_len
+sysset "$VALUE" /sys/class/net/umts_dm0/tx_queue_len
+
+sysset westwood /proc/sys/net/ipv4/tcp_congestion_control

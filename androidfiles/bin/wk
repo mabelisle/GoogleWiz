@@ -1,7 +1,0 @@
-#!/system/bin/sh
-
-if [ -e /sdcard/boot.img ]; then
-    /system/bin/toolbox dd if=/sdcard/boot.img of=/dev/block/sda7
-    sync
-    sync
-fi

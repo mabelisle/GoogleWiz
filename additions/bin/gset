@@ -1,0 +1,10 @@
+#!/system/bin/sh
+
+CMD=/system/bin/cmd
+
+$CMD settings list global  | awk '{print "settings put global " $1}' > "/data/tmp.$1"
+$CMD settings list system  | awk '{print "settings put system " $1}'>> "/data/tmp.$1"
+$CMD settings list secure  | awk '{print "settings put secure " $1}'>> "/data/tmp.$1"
+
+cat "/data/tmp.$1" | sed 's/=/ /g' > "/sdcard/$1"
+rm "/data/tmp.$1"
