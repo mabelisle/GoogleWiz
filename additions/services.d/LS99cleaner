@@ -1,0 +1,97 @@
+#!/system/bin/sh
+
+LOGFILE=$1
+RM=/system/bin/rm
+
+DAY=$( date +"%d" )
+CONTINUE=1
+
+$RM -rf /data/app-asec/
+$RM -rf /data/app-ephemeral/
+$RM -rf /data/app-lib/
+$RM -rf /data/app-private/
+$RM -rf /data/bio/
+$RM -rf /data/custom_image/
+$RM -rf /data/enc_user/
+$RM -rf /data/local/
+$RM -rf /data/mptcp/
+$RM -rf /data/nfc_log/
+$RM -rf /data/otp/
+$RM -rf /data/privatemode/
+$RM -rf /data/slog/
+$RM -rf /data/snd/
+$RM -rf /data/ss/
+$RM -rf /data/tombstones/
+$RM -rf /data/vendor/
+
+if [ $DAY -eq 1 ]; then CONTINUE=0; fi
+if [ $DAY -eq 4 ]; then CONTINUE=0; fi
+if [ $DAY -eq 10 ]; then CONTINUE=0; fi
+if [ $DAY -eq 13 ]; then CONTINUE=0; fi
+if [ $DAY -eq 16 ]; then CONTINUE=0; fi
+if [ $DAY -eq 19 ]; then CONTINUE=0; fi
+if [ $DAY -eq 21 ]; then CONTINUE=0; fi
+if [ $DAY -eq 24 ]; then CONTINUE=0; fi
+if [ $DAY -eq 27 ]; then CONTINUE=0; fi
+if [ $DAY -eq 30 ]; then CONTINUE=0; fi
+
+if [ ! $CONTINUE -eq 1 ]; then
+    echo "** $0 no need to run on day $DAY" | tee -a $LOGFILE
+    exit 0
+fi
+
+echo "-- Deleting cache directories" | tee -a $LOGFILE
+for i in `find /data/data -type d -iname "*cache*"`; do
+    $RM -rf $i
+done
+
+echo "-- Deleting files in /data" | tee -a $LOGFILE
+$RM -rf /data/local/*.apk
+$RM -rf /data/local/tmp/*.apk
+$RM -rf /data/log/*.log
+$RM -rf /cache/*.*
+$RM -rf /cache/recovery/*.*
+$RM -rf /data/system/dropbox/*.txt
+$RM -rf /data/backup/pending/*.tmp
+$RM -rf /data/tombstones/*.*
+$RM -rf /cache/*.apk
+$RM -rf /cache/*.tmp
+$RM -rf /cache/*.log
+$RM -rf /cache/*.txt
+$RM -rf /cache/recovery/*
+$RM -rf /data/*.log
+$RM -rf /data/*.txt
+$RM -rf /data/anr/*.log
+$RM -rf /data/anr/*.txt
+$RM -rf /data/backup/pending/*.tmp
+$RM -rf /data/cache/*.*
+$RM -rf /data/dalvik-cache/*.apk
+$RM -rf /data/dalvik-cache/*.tmp
+$RM -rf /data/dalvik-cache/*.log
+$RM -rf /data/dalvik-cache/*.txt
+$RM -rf /data/data/*.log
+$RM -rf /data/data/*.txt
+$RM -rf /data/log/*.log
+$RM -rf /data/log/*.txt
+$RM -rf /data/local/*.apk
+$RM -rf /data/local/*.log
+$RM -rf /data/local/*.txt
+$RM -rf /data/local/tmp/*.log
+$RM -rf /data/local/tmp/*.txt
+$RM -rf /data/last_alog/*.log
+$RM -rf /data/last_alog/*.txt
+$RM -rf /data/last_kmsg/*.log
+$RM -rf /data/last_kmsg/*.txt
+$RM -rf /data/mlog/*
+$RM -rf /data/tombstones/*.log
+$RM -rf /data/tombstones/*.txt
+$RM -rf /data/system/*.log
+$RM -rf /data/system/*.txt
+$RM -rf /data/system/dropbox/*.log
+$RM -rf /data/system/dropbox/*.txt
+$RM -rf /data/system/usagestats/*.log
+$RM -rf /data/system/usagestats/*.txt
+$RM -rf /sd*/LOST.DIR
+$RM -rf /data/ota
+$RM -rf /data/ota_package
+$RM -rf /data/stock_boot*

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <!-- foobar66 -->
+  <local name="BACK_CAMERA_SHOOTINGMODE_AUTO" value="true" />
+  <local name="BACK_CAMERA_SHOOTINGMODE_ANIMATEDGIF" value="true"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_AQUA" value="false"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_BEAUTY_SHOT" value="true"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_CONTINUOUS_SHOT" value="true"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_DUAL" value="true"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_FAST_MOTION" value="false"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_FOOD" value="true"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_HYPER_MOTION" value="false"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_LVB" value="false"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_MIRROR_SELFIE" value="false"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_MOTION_PANORAMA" value="false"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_NIGHT_SHOT" value="true"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_NIGHT_SHOT_SCENE" value="false"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_NIGHT_SHOT_SINGLE" value="false"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_PANORAMA_SHOT" value="false"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_PRO" value="true"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_PRODUCT_SEARCH" value="false"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_PRO_LITE" value="false"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_REAR_SELFIE" value="false"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_RICH_TONE" value="false"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_SELECTIVE_FOCUS" value="true"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_SHOT_AND_MORE" value="false"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_SLOW_MOTION" value="false"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_SOCIAL" value="false"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_SOUND_AND_SHOT" value="false"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_SPORTS_SCENE" value="true"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_SUPER_SLOW_MOTION" value="false"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_TAG_SHOT" value="true"/>
+  <local name="BACK_CAMERA_SHOOTINGMODE_VIRTUAL_SHOT" value="false"/>
+
+  <!-- foobar66 -->
+  <local name="FRONT_CAMERA_SHOOTINGMODE_ANIMATEDGIF" value="true"/>
+  <local name="FRONT_CAMERA_SHOOTINGMODE_AUTO" value="true"/>
+  <local name="FRONT_CAMERA_SHOOTINGMODE_BEAUTY_SHOT" value="true"/>
+  <local name="FRONT_CAMERA_SHOOTINGMODE_CONTINUOUS_SHOT" value="false"/>
+  <local name="FRONT_CAMERA_SHOOTINGMODE_DUAL" value="true"/>
+  <local name="FRONT_CAMERA_SHOOTINGMODE_LVB" value="false"/>
+  <local name="FRONT_CAMERA_SHOOTINGMODE_MOTION_WIDE_SELFIE" value="false"/>
+  <local name="FRONT_CAMERA_SHOOTINGMODE_NIGHT_SHOT" value="true"/>
+  <local name="FRONT_CAMERA_SHOOTINGMODE_NIGHT_SHOT_SCENE" value="false"/>
+  <local name="FRONT_CAMERA_SHOOTINGMODE_NIGHT_SHOT_SINGLE" value="false"/>
+  <local name="FRONT_CAMERA_SHOOTINGMODE_RICH_TONE" value="false"/>
+  <local name="FRONT_CAMERA_SHOOTINGMODE_SELECTIVE_FOCUS" value="true"/>
+  <local name="FRONT_CAMERA_SHOOTINGMODE_SELFIE" value="true"/>
+  <local name="FRONT_CAMERA_SHOOTINGMODE_SHOT_AND_MORE" value="false"/>
+  <local name="FRONT_CAMERA_SHOOTINGMODE_SOCIAL" value="false"/>
+  <local name="FRONT_CAMERA_SHOOTINGMODE_SOUND_AND_SHOT" value="false"/>
+  <local name="FRONT_CAMERA_SHOOTINGMODE_VIDEO_COLLAGE" value="false"/>
+  <local name="FRONT_CAMERA_SHOOTINGMODE_VIRTUAL_SHOT" value="false"/>
+  <local name="FRONT_CAMERA_SHOOTINGMODE_WIDE_SELFIE" value="false"/>
+  <local name="FRONT_CAMERA_SHOOTINGMODE_WIDE_SELFIE_LITE" value="false"/>
+
+  <!-- foobar66 -->
+  <!-- Capture resolution - BACK -->
+  <local name="BACK_CAMERA_RESOLUTION_18DOT5BY9" value="4032x1960"/>
+  <local name="BACK_CAMERA_RESOLUTION_16BY9_LARGE" value="4032x2268"/>
+  <local name="BACK_CAMERA_RESOLUTION_16BY9_MEDIUM" value="2560x1440"/>
+  <local name="BACK_CAMERA_RESOLUTION_4BY3_LARGE" value="4032x3024"/>
+  <local name="BACK_CAMERA_RESOLUTION_4BY3_MEDIUM" value="2880x2160"/>
+  <local name="BACK_CAMERA_RESOLUTION_1BY1_LARGE" value="3024x3024"/>
+  <local name="BACK_CAMERA_RESOLUTION_1BY1_MEDIUM" value="2160x2160"/>
+  <local name="BACK_CAMERA_PICTURE_DEFAULT_RESOLUTION" value="4032x1960"/>
+  
+  <!-- Capture resolution - FRONT -->
+  <local name="FRONT_CAMERA_RESOLUTION_18DOT5BY9" value="3264x1592"/>
+  <local name="FRONT_CAMERA_RESOLUTION_16BY9_LARGE" value="3264x1836"/>
+  <local name="FRONT_CAMERA_RESOLUTION_4BY3_LARGE" value="3264x2448"/>
+  <local name="FRONT_CAMERA_RESOLUTION_1BY1_LARGE" value="2448x2448"/>
+  <local name="FRONT_CAMERA_PICTURE_DEFAULT_RESOLUTION" value="3264x1592"/>
+  
+  <!-- Recording resolution - BACK -->
+  <local name="BACK_CAMERA_RECORDING_DEFAULT_RESOLUTION" value="1920x1080"/>
+  <local name="BACK_CAMERA_RECORDING_MIN_RESOLUTION" value="640x480"/>
+  <local name="BACK_CAMCORDER_RESOLUTION_3840X2160" value="true" hdr="true" preview-size="3840x2160" snapshot-support="true" snapshot-size="4032x2268" vdis="true" effect="true" object-tracking="true"/>
+  <local name="BACK_CAMCORDER_RESOLUTION_2560X1440" value="true" hdr="true" preview-size="2560x1440" snapshot-support="true" snapshot-size="4032x2268" vdis="true" effect="true" object-tracking="true"/>
+  <local name="BACK_CAMCORDER_RESOLUTION_2224X1080" value="true" hdr="true" preview-size="2224x1080" snapshot-support="true" snapshot-size="4032x1960" vdis="true" effect="true" object-tracking="true"/>
+  <local name="BACK_CAMCORDER_RESOLUTION_1920X1080" value="true" hdr="true" preview-size="1920x1080" snapshot-support="true" snapshot-size="4032x2268" vdis="true" effect="true" object-tracking="true"/>
+  <local name="BACK_CAMCORDER_RESOLUTION_1920X1080_60FPS" value="true" hdr="false" preview-size="1920x1080" snapshot-support="false" snapshot-size="4032x2268" vdis="true" effect="false" object-tracking="true"/>
+  <local name="BACK_CAMCORDER_RESOLUTION_1440X1440" value="true" hdr="true" preview-size="1088x1088" snapshot-support="true" snapshot-size="4032x2268" vdis="false" effect="true" object-tracking="true"/>
+  <local name="BACK_CAMCORDER_RESOLUTION_1280X720" value="true" hdr="true" preview-size="1280x720" snapshot-support="true" snapshot-size="4032x2268" vdis="true" effect="true" object-tracking="true"/>
+  <local name="BACK_CAMCORDER_RESOLUTION_640X480" value="true" hdr="true" preview-size="1440x1080" snapshot-support="true" snapshot-size="4032x3024" vdis="false" effect="true" object-tracking="true"/>
+  <local name="BACK_CAMCORDER_RESOLUTION_176X144" value="true"/>
+  
+  <!-- Recording resolution - FRONT -->
+  <local name="FRONT_CAMERA_RECORDING_DEFAULT_RESOLUTION" value="2560x1440"/>
+  <local name="FRONT_CAMERA_RECORDING_MIN_RESOLUTION" value="640x480"/>
+  <local name="FRONT_CAMCORDER_RESOLUTION_2560X1440" value="true" hdr="true" preview-size="2560x1440" snapshot-support="true" snapshot-size="3264x1836" vdis="true" effect="true" object-tracking="false"/>
+  <local name="FRONT_CAMCORDER_RESOLUTION_2224X1080" value="true" hdr="true" preview-size="2224x1080" snapshot-support="true" snapshot-size="3264x1592" vdis="true" effect="true" object-tracking="false"/>
+  <local name="FRONT_CAMCORDER_RESOLUTION_1920X1080" value="true" hdr="true" preview-size="1920x1080" snapshot-support="true" snapshot-size="3264x1836" vdis="true" effect="true" object-tracking="false"/>
+  <local name="FRONT_CAMCORDER_RESOLUTION_1440X1440" value="true" hdr="true" preview-size="2560x1440" snapshot-support="true" snapshot-size="3264x1836" vdis="true" effect="true" object-tracking="false"/>
+  <local name="FRONT_CAMCORDER_RESOLUTION_1280X720" value="true" hdr="true" preview-size="1280x720" snapshot-support="true" snapshot-size="3264x1836" vdis="true" effect="true" object-tracking="false"/>
+  <local name="FRONT_CAMCORDER_RESOLUTION_640X480" value="true" hdr="true" preview-size="1440x1080" snapshot-support="true" snapshot-size="3264x2448" vdis="false" effect="true" object-tracking="false"/>
+  <local name="FRONT_CAMCORDER_RESOLUTION_176X144" value="true"/>
+  
+      <!-- Phase AF in FHD 60FPS -->
+    <local name="SUPPORT_PHASE_AF_60FPS" value="false"/>
+
+    <!-- Rear lens distortion correction -->
+    <local name="REAR_LENS_DISTORTION_CORRECTION" value="true" />
+
+    <!-- Camera related features -->
+    <local name="SUPPORT_FRONT_AF" value="true"/>
+
+    <!-- Performance feature -->
+    <local name="SUPPORT_MULTI_INSTANCE_CAMERA" value="false"/> <!-- temporary disable -->
+    <local name="ANTI_FOG_PREVIEW_FPS_MAX" value="24000"/>
+
+    <!-- Thermistor Temperature - Only JPN used -->
+    <local name="OVERHEAT_LIMITATION_TEMP" value="640" />
+    <local name="OVERHEAT_AVAILABLE_TEMP" value="550" />
+    <local name="FLASH_OVERHEAT_LIMITATION_TEMP" value="440" />
+
+    <!-- Etc. features -->
+    <local name="SUPPORT_FLOATING_CAMERA_BUTTON" value="true"/>
+    <local name="SUPPORT_FACE_AR" value="true"/>
+    <local name="SUPPORT_STAMP" value="true"/>
+    <local name="SUPPORT_WATERMARK" value="false"/>
+    <local name="SUPPORT_MY_EMOJI" value="false"/>
+    
+    <!-- LDU. features -->
+    <local name="SUPPORT_GUIDE_TEXT_FOR_AUTO_FOCUS" value="true"/>
+
+    <!-- Quick launch features -->
+    <local name="CAMERA_QUICK_LAUNCH_USING_POWER_KEY" value="true"/>
+
+    <!-- foobar66 -->
+    <local name="SUPPORT_DOWNLOAD_BUTTON_IN_LIST" value="false"/>
+    <local name="SUPPORT_DOWNLOAD_SHOOTING_MODES" value="false"/>
+    <local name="SUPPORT_DOWNLOAD_STICKER" value="false"/>
+
+    <!-- foobar66 -->
+    <local name="SUPPORT_AUTO_NIGHT_DETECTION" value="true"/>
+    <local name="SUPPORT_AMOLED_DISPLAY" value="true"/>
+    <local name="SUPPORT_AUTO_FOCUS" value="true"/>
+    <local name="SUPPORT_BARCODE_DETECTION" value="true"/>
+    <local name="SUPPORT_CAMERA_BRIGHTNESS" value="true"/>
+    <local name="SUPPORT_CAMERA_ISO" value="true"/>
+    <local name="SUPPORT_CONTINUOUS_AF" value="true"/>
+    <local name="SUPPORT_STICKER" value="false"/>
+    <local name="SUPPORT_STICKERS" value="false"/>
+    <local name="SUPPORT_FLOATING_CAMERA_BUTTON" value="false"/>
+    <local name="SUPPORT_FACE_AR" value="false"/>
+    <local name="SUPPORT_STAMP" value="false"/>
+    <local name="SUPPORT_WATERMARK" value="false"/>
+    <local name="SUPPORT_MY_EMOJI" value="false"/>
+    <local name="SUPPORT_HEART_RATE_SENSOR_SHUTTER" value="true"/>
+    <local name="SUPPORT_SVIEW_COVER_CAMERA" value="false"/>
+    <local name="CAMERA_FRONT_FLASH" value="true"/>
+    <local name="CAMERA_SCREEN_FLASH_VI" value="true"/>
+    <local name="SUPPORT_LIVE_FOCUS_TORCH_FLASH" value="true"/>
+    <local name="SUPPORT_INFINITY_FOCUS" value="true"/>
+    <local name="SUPPORT_FACE_PRIORITY_AF" value="true"/>
+    <local name="SUPPORT_FAST_REACTIVE_AF" value="true"/>
+    <local name="SUPPORT_MULTI_AF" value="true"/>
+    <local name="SUPPORT_DYNAMIC_RANGE_CONTROL" value="true"/>
+    <local name="SUPPORT_ZOOM" value="true"/>
+    <local name="SUPPORT_DUAL_CAMERA_MODE" value="true"/>
+    <local name="CAMERA_SUPPORT_BEAUTY_SUBMENU" value="true"/>
+    <local name="SUPPORT_INTELLIGENT_TIPS" value="false"/>
+    <local name="CAMERA_LOW_PERFORMANCE_CONTINUOUS" value="true"/>
+    <local name="SUPPORT_SIGNATURE_STAMP" value="false"/>
+    
+</resources>

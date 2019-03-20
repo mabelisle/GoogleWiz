@@ -1,0 +1,15 @@
+#!/system/bin/sh
+
+LOGFILE=$1
+
+resetprop () {
+    echo "-- resetprop $1 $2" | tee -a $LOGFILE
+    /sbin/resetprop "$1" "$2"
+}
+
+resetprop dalvik.vm.image-dex2oat-Xms 128m
+resetprop dalvik.vm.image-dex2oat-Xmx 256m
+resetprop dalvik.vm.dex2oat-Xms 128m
+resetprop ro.config.tima 0
+resetprop ro.config.knox v30
+resetprop ro.knox.enhance.zygote.aslr 1

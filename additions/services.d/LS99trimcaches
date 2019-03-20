@@ -1,0 +1,9 @@
+#!/system/bin/sh
+
+LOGFILE=$1
+PM=/system/bin/pm
+
+echo "-- pm trim-caches 16g" | tee -a $LOGFILE
+$PM trim-caches 16g
+echo "-- pm trim-caches 128g" | tee -a $LOGFILE
+$PM trim-caches 128g

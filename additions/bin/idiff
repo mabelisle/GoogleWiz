@@ -1,0 +1,105 @@
+#!/system/xbin/bash
+
+mount -o rw,remount /system
+
+declare -A dirmap
+
+dirmap[com.google.android.apps.tasks]=/system/priv-app/MyGoogleTasks/
+dirmap[com.android.chrome]=/system/priv-app/MyGoogleChrome/
+dirmap[com.android.providers.calendar]=/system/priv-app/MyGoogleCalendarProvider/
+dirmap[com.android.vending]=/system/priv-app/MyGooglePlayStore/
+dirmap[com.electricsheep.asipro]=/system/priv-app/MySystemInfo/
+dirmap[com.estrongs.android.pop.pro]=/system/priv-app/MyFileManager/
+dirmap[com.google.android.apps.actionsservice]=/system/priv-app/MyGoogleActionService/
+dirmap[com.google.android.apps.chromecast.app]=/system/priv-app/MyGoogleChromecast/
+dirmap[com.google.android.apps.cloudprint]=/system/priv-app/MyGoogleCloudPrint/
+dirmap[com.google.android.apps.docs]=/system/priv-app/MyGoogleDrive/
+dirmap[com.google.android.apps.emergencyassist]=/system/priv-app/MyGoogleTrustedContacts/
+dirmap[com.google.android.apps.fitness]=/system/priv-app/MyGoogleFit/
+dirmap[com.google.android.apps.freighter]=/system/priv-app/MyGoogleDatally/
+dirmap[com.google.android.apps.googleassistant]=/system/priv-app/MyGoogleAssistant/
+dirmap[com.google.android.apps.magazines]=/system/priv-app/MyGoogleNews/
+dirmap[com.google.android.apps.maps]=/system/priv-app/MyGoogleMaps/
+dirmap[com.google.android.apps.messaging]=/system/priv-app/MyGoogleMessaging/
+dirmap[com.google.android.apps.nbu.files]=/system/priv-app/MyGoogleFilesGo/
+dirmap[com.google.android.apps.nexuslauncher]=/system/priv-app/MyGooglePixelLauncher/
+dirmap[com.google.android.apps.pdfviewer]=/system/priv-app/MyGooglePDFViewer/
+dirmap[com.google.android.apps.photos]=/system/priv-app/MyGooglePhotos/
+dirmap[com.google.android.apps.plus]=/system/priv-app/MyGooglePlus/
+dirmap[com.google.android.apps.podcasts]=/system/priv-app/MyGooglePodcasts/
+dirmap[com.google.android.apps.translate]=/system/priv-app/MyGoogleTranslate/
+dirmap[com.google.android.apps.travel.onthego]=/system/priv-app/MyGoogleTrips/
+dirmap[com.google.android.apps.wallpaper]=/system/priv-app/MyGoogleWallpapers/
+dirmap[com.google.android.calculator]=/system/priv-app/MyGoogleCalculator/
+dirmap[com.google.android.calendar]=/system/priv-app/MyGoogleCalendar/
+dirmap[com.google.android.contacts]=/system/priv-app/MyGoogleContacts/
+dirmap[com.google.android.deskclock]=/system/priv-app/MyGoogleClock
+dirmap[com.google.android.dialer]=/system/priv-app/MyGoogleDialer/
+dirmap[com.google.android.gm]=/system/priv-app/MyGoogleGmail/
+dirmap[com.google.android.gms]=/system/priv-app/MyGooglePlayServices/
+dirmap[com.google.android.googlequicksearchbox]=/system/priv-app/MyGoogleApp/
+dirmap[com.google.android.inputmethod.latin]=/system/app/MyGoogleGboard/
+dirmap[com.google.android.keep]=/system/priv-app/MyGoogleKeep/
+dirmap[com.google.android.markup]=/system/priv-app/MyGoogleMarkup/
+dirmap[com.google.android.music]=/system/priv-app/MyGoogleMusic/
+dirmap[com.google.android.partnersetup]=/system/priv-app/MyGooglePartnerSetup/
+dirmap[com.google.android.projection.gearhead]=/system/priv-app/MyGoogleAuto/
+dirmap[com.google.android.tts]=/system/app/MyGoogleTTS/
+dirmap[com.google.android.webview]=/system/app/MyGoogleWebview/
+dirmap[com.google.android.youtube]=/system/priv-app/MyGoogleYoutube/
+dirmap[com.google.ar.core]=/system/priv-app/MyGoogleARCore/
+dirmap[com.google.ar.lens]=/system/priv-app/MyGoogleLens/
+dirmap[com.google.earth]=/system/priv-app/MyGoogleEarth/
+dirmap[com.google.tango.measure]=/system/priv-app/MyGoogleMeasure/
+dirmap[com.samsung.android.lool]=/system/priv-app/SmartManager_v5/
+dirmap[com.teslacoilsw.launcher.prime]=/system/priv-app/MyLauncherKey/
+dirmap[com.teslacoilsw.launcher]=/system/priv-app/MyLauncher/
+dirmap[com.teslacoilsw.launcherclientproxy]=/system/priv-app/MyLauncherCompanion/
+dirmap[com.themezilla.pixelui]=/system/priv-app/MyGoogleIconPack/
+dirmap[com.topjohnwu.magisk]=/system/priv-app/MyMagisk/
+dirmap[com.touchtype.swiftkey]=/system/app/MySwiftkey/
+dirmap[org.kman.AquaMail.UnlockerMarket]=/system/priv-app/MyMailKey/
+dirmap[org.kman.AquaMail]=/system/priv-app/MyMail/
+dirmap[com.niksoftware.snapseed]=/system/priv-app/MyGoogleSnapseed/
+dirmap[com.google.android.apps.photos.scanner]=/system/priv-app/MyGooglePhotoscanner/
+dirmap[com.google.android.apps.docs.editors.docs]=/system/priv-app/MyGoogleDocs/
+dirmap[com.google.android.apps.docs.editors.slides]=/system/priv-app/MyGoogleSlides/
+dirmap[com.google.android.apps.docs.editors.sheets]=/system/priv-app/MyGoogleSheets/
+dirmap[com.google.android.street]=/system/priv-app/MyGoogleStreetview/
+dirmap[com.google.android.apps.walletnfcrel]=/system/priv-app/MyGooglePay/
+dirmap[com.google.android.apps.m4b]=/system/priv-app/MyGoogleMyMaps/
+dirmap[com.android.musicfx]=/system/priv-app/MyGoogleMusicFX/
+
+for pkg in "${!dirmap[@]}"; do
+    CNT=`ls -l /data/app/ | grep -v Swift | grep "$pkg-"`
+    VN=`pm dump $pkg | grep versionName | head -n 1 | sed 's/versionName=//g' | awk '{print $1}' | sed 's/ //g'`
+    if [ "$CNT" != "" ]; then
+        DIR=`echo $CNT | awk '{print $8}'`
+        DEST="${dirmap[$pkg]}"
+        echo "- Package $pkg ($VN) has changed"
+        if [ -e "$DEST" ]; then
+            echo "   - Copying /data/app/$DIR/*.apk to $DEST"
+            rm -rf $DEST/*
+            # copy the base.apk
+            cp /data/app/$DIR/*.apk $DEST/
+            if [ -e /data/app/$DIR/lib/ ]; then
+                echo "   - Copying /data/app/$DIR/lib/ to $DEST"
+                # copy the libraries
+                cp -r /data/app/$DIR/lib/ $DEST/
+            fi
+            # make sure root is the owner
+            chown 0.0 $DEST
+            # directories should have 755 permission, files 644
+            find $DEST -type d -exec chmod 755 {} \;
+            find $DEST -type f -exec chmod 644 {} \;
+            echo "   - Uninstalling $pkg"
+            pm uninstall -k $pkg > /dev/null
+            VN=`pm dump $pkg | grep versionName | head -n 1 | sed 's/versionName=//g' | awk '{print $1}' | sed 's/ //g'`
+        else
+            echo "   - $DEST does not exist so not copying anything"
+        fi
+    else
+        echo "- Package $pkg ($VN) has NOT changed"
+    fi
+done
+

@@ -1,0 +1,13 @@
+#!/system/bin/sh
+
+LOGFILE=$1
+PROP=/system/bin/getprop
+BB=/system/xbin/busybox
+CNT=0
+
+if [ -e /sys/module/sync/parameters/fsync_enabled ]; then
+    echo "-- setting /sys/module/sync/parameters/fsync_enabled to Y" | tee -a $LOGFILE
+    echo Y > /sys/module/sync/parameters/fsync_enabled
+else
+    echo "-- /sys/module/sync/parameters/fsync_enabled does not exist" | tee -a $LOGFILE
+fi

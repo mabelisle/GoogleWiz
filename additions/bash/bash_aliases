@@ -1,0 +1,13 @@
+alias p=pwd
+alias ls='ls -Fas --color=auto'
+alias c=clear
+alias ps=/system/xbin/pps
+alias cd=pushd
+alias s=pushd
+alias p=dirs
+alias df='df -h'
+alias du='\du -h -c'
+alias h=history
+alias pr1="awk '{print \$1}'"
+alias rmj="find -name '*~' -exec rm -rf {} \;"
+alias ips="toybox ps -A -o user,pid,ppid,args | grep -v '\['"

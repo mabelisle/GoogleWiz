@@ -1,1 +1,0 @@
-busybox ps | grep -v kworker | grep -v kbase_event
